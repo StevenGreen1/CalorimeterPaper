@@ -1,0 +1,443 @@
+
+%\documentclass[preprint,a4paper]{elsarticle}
+\documentclass[final,3p,times,twocolumn]{elsarticle}
+%\documentclass[review,3p,number,times]{elsarticle}
+\usepackage{lineno}
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Default packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{calorimeter}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{units}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{upgreek}
+\usepackage{threeparttable}
+%\usepackage[varg]{txfonts}
+\usepackage{slashed}
+
+%\hyphenation{CLIC-Pfo-Selec-tor}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is where the document really begins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\journal{Nucl. Instr. and Meth. A}
+
+\begin{document}
+  \begin{frontmatter}
+%%     \begin{flushright} 
+%%       CU-HEP-12/12 \\
+%%       August 2012
+%%     \end{flushright}   
+    
+    % Title of the paper
+    \title{Design of an Electromagnetic Calorimeter for use at a future\\ e$^{+}$e$^{-}$ Linear Collider}
+    
+    % Author(s) of the paper
+    \author[a]{J. S. Marshall\corref{cor1}}
+    \ead{marshall@hep.phy.cam.ac.uk}
+    
+    % Affiliations
+    \address[a]{Cavendish Laboratory, University of Cambridge, Cambridge, United Kingdom}
+     \cortext[cor1]{Corresponding author}
+
+    % The abstract
+    \begin{abstract}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+    \end{abstract}
+
+    \begin{keyword}
+	Particle flow calorimetry, ECAL, Linear Collider, CLIC
+	%% keywords here, in the form: keyword \sep keyword
+	%% MSC codes here, in the form: \MSC code \sep code
+	%% or \MSC[2008] code \sep code (2000 is the default)
+    \end{keyword}
+  \end{frontmatter}
+  
+\linenumbers 
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Main part
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\section{Introduction}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.45\textwidth]{EventECAL.pdf}
+     \caption{\label{}}
+  \end{center}
+\end{figure}
+
+\section{Implementation}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Added JER and calib section. - SG
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\section{Jet Energy Resolution and Calibration}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% SiW\,/\,ScW ECAL Comparison move to start of ECal 
+% section? - SG
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\section{SiW\,/\,ScW ECAL Comparison}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{ERes_vs_Egamma.pdf}
+     \includegraphics[width=0.49\textwidth]{SiSc_TProfile.pdf}
+     \caption{\label{}}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{Confusion_vs_E.pdf}
+     \caption{\label{}}
+  \end{center}
+\end{figure}
+
+
+\section{ECAL Parameter Scan}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\subsection{Transverse Granularity}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{Res_vs_C_diffE_Photon.pdf}
+     \includegraphics[width=0.49\textwidth]{Confusion_vs_C_250.pdf}
+     \caption{\label{}}
+  \end{center}
+\end{figure}
+
+
+\subsection{Number of Layers}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{Res_vs_L_diffE_Photon.pdf}
+     \includegraphics[width=0.49\textwidth]{Res_vs_M_diffE_Photon.pdf}
+%     \includegraphics[width=0.49\textwidth]{ERes_vs_L.pdf}
+     \caption{\label{}}
+  \end{center}
+\end{figure}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Added HCal section - SG
+% Possibly change this title from parameter scan to optimisation
+% as we need somewhere to put the shower profiles and energy
+% resolutions (which isn't a param scan)
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\section{HCAL Parameter Scan}
+ILD detector model used.  Timing cuts used are 10ns in HCal and 20ns in ECal.  No MaxHCalHitHadronicEnergy.  Full calibration procedure applied for all detector models.  
+QGSP\_BERT physics list used in all cases except Fe and W comparison where both QGSP\_BERT and QGSP\_BERT\_HP used. 
+
+\subsection{Fe\,/\,W HCAL Comparison}
+The feasible options for HCal absorber material are steel (Iron) and tungsten (WMod).  The thicknesses of the scintillator and absorber layers of the HCal were scaled to maintain the total number of nuclear interaction lengths in the HCal.  The ratio of scintillator and absorber thicknesses in the HCal was held constant to maintain the sampling fraction.  Otherwise default ILD DBD detector parameters were used.
+
+Both the QGSP\_BERT and QGSP\_BERT\_HP physics lists were used in this analysis.  The high precision neutron package, included in QGSP\_BERT\_HP, offers more realistic modelling of the transportation of neutrons below 20 MeV down to thermal energies.  The compact nature of the hadronic showers showering in tungsten was the primary reason for the inclusion of the high precision neutron package in this analysis.
+
+HCals using steel as an absorber material were found to outperform those using tungsten across the entire range of jet energies considered.  This trend was found to be more prominent for high energy jets.  No strong dependance on the choice of physics list was observed.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{JERvsJetEnergy_HCalMaterialHCalTC10ns.png}
+     \caption{The jet energy resolution as a function of jet energy.  Results are shown for detectors using both steel and tungsten HCal absorber materials and using both the QGSP\_BERT and QGSP\_BERT\_HP physics lists.  \label{}}
+  \end{center}
+\end{figure}
+
+\subsection{Transverse Granularity}
+The transverse granularity of the HCal, the HCal cell size, was varied.  Otherwise, default ILD DBD detector parameters were used in this analysis.
+
+Figure \ref{HCalCellSize} shows the jet energy resolution as a function of HCal cell size for various energy jets.  It was found that smaller HCal cell sizes benefited the jet energy resolution and that this trend became more prominent for higher energy jets.  The jet energy resolution was decomposed into the confusion and intrinsic energy resolution terms.  The results of this decomposition for the 250 GeV jets are shown in figure \ref{HCalCellSize}.
+
+The intrinsic energy resolution was found to be invariant under changes to HCal cell size.  This indicates the performance trend observed for HCal cell size are dictated by the confusion term.  This is expected as changes to HCal cell size will aid the association of calorimeter cell clusters to charged particle tracks, but will not affect intrinsic energy resolution.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{JERvsHCalCellSizeHCalTC10ns.png}
+     \includegraphics[width=0.49\textwidth]{JERBreakdownvsHCalCellSize500GeVDiJetHCalTC10ns.png}
+     \caption{ (top) The jet energy resolution as a function of HCal cell size.  Results are shown for various jet energies ranging from 45 GeV to 500 GeV.  (bottom) The jet energy resolution decomposition as a function of HCal cell size.  The results shown are for a jet energy of 250 GeV.  \label{HCalCellSize}}
+  \end{center}
+\end{figure}
+
+\subsection{Number of Layers}
+The number of layers in the HCal was varied.  The scintillator and absorber thicknesses were scaled to maintain the total number of nuclear interaction lengths in the HCal.  The ratio of scintillator and absorber thicknesses was held constant to maintain the sampling fraction.  Otherwise, default ILD DBD detector parameters were used in this analysis.
+
+Figure \ref{HCalLayers} shows the jet energy resolution as a function of the number of layers in the HCal for various energy jets.  It was found that reducing the number of layers in the HCal degrades the jet energy resolution and that this trend applies to all jet energies considered.  
+
+Insufficient sampling of particle showers in the HCal is likely to be the primary cause of the degradation at low numbers of layers in the HCal.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{JERvsHCalNumLayersHCalTC10ns.png}
+     \caption{The jet energy resolution as a function of number of layers in the HCal.  Results are shown for various jet energies ranging from 45 GeV to 500 GeV.\label{HCalLayers}}
+  \end{center}
+\end{figure}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Not sure if Depth section title is clear? - SG
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\subsection{Depth}
+The total number of nuclear interaction lengths in the HCal was varied by changing both the absorber and scintillator thicknesses in the HCal.  The ratio of absorber to scintillator thicknesses in the HCal was held constant to maintain the sampling fraction.  Otherwise, default ILD DBD detector parameters were used in this analysis.
+
+Figure \label{HCalDepth} shows the jet energy resolution as a function of the total number of nuclear interaction lengths in the HCal.  It was found that increasing the number of nuclear interaction lengths in the HCal improved the jet energy resolution for high energy jets.  
+
+The number of nuclear interaction lengths in the HCal will determine the impact of leakage of energy out of the back of the calorimeters.  Energy leaked from the back of the calorimeters will be measured in the muon chamber.  The energy resolution in the muon chamber is significantly worse than in the calorimeters, therefore, leakage degrades the jet energy resolution.  As jet energy increases so does the fraction of the total energy leaking out of the back of the detector.  Therefore, reducing leakage is more beneficial to higher energy jets, which is what is observed.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{JERvsHCalIntLengthHCalTC10ns.png}
+     \caption{The jet energy resolution as a function of the total number of nuclear interaction lengths in the HCal.  Results are shown for various jet energies ranging from 45 GeV to 500 GeV.\label{HCalDepth}}
+  \end{center}
+\end{figure}
+
+\subsection{Sampling Fraction in HCal}
+
+
+Sampling fraction varied.  Total number of nuclear interaction lengths in HCal held constant. 
+
+No picture needed in this section, all jet energy resolutions are flat wrt sampling fraction except at 0.05 (range considered 0.05 to 0.25 steps 0.05) where they start to 
+deteriorate across all jet energies considered.  
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Possible change for global parameter scan section - SG
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\section{Global Parameter Scan}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\subsection{Inner Radius}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{JERvsOuterTPCRadiusHCalTC10ns.png}
+      \caption{The jet energy resolution as a function of the outer TPC radius.  The outer TPC radius can be interpreted as the inner ECal radius.  Results are shown for various jet energies ranging from 45 GeV to 500 GeV.\label{}}
+  \end{center}
+\end{figure}
+
+\subsection{B-Field Strength}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{JERvsBFieldHCalTC10ns.png}
+     \caption{The jet energy resolution as a function of the magnetic field strength within the detector.  Results are shown for various jet energies ranging from 45 GeV to 500 GeV.\label{}}
+  \end{center}
+\end{figure}
+
+\subsection{Scintillator Thickness}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+%\begin{figure}[!h]
+%  \begin{center}
+%     \includegraphics[width=0.49\textwidth]{ERes_vs_T.pdf}
+%     \includegraphics[width=0.49\textwidth]{Sc_TProfile.pdf}
+%     \caption{\label{}}
+%  \end{center}
+%\end{figure}
+
+%\begin{figure}[!h]
+%  \begin{center}
+%     \includegraphics[width=0.49\textwidth]{Res_vs_T_diffE_Photon.pdf}
+%     \caption{\label{}}
+%  \end{center}
+%\end{figure}
+
+%\subsection{Multi-Layer Readout}
+
+%\begin{figure}[!h]
+%  \begin{center}
+%     \includegraphics[width=0.49\textwidth]{Res_vs_M_diffE_Photon.pdf}
+%     \includegraphics[width=0.49\textwidth]{Confusion_vs_M_250.pdf}
+%     \caption{\label{}}
+%  \end{center}
+%\end{figure}
+
+\subsection{Parameterisation of Results}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+%\begin{figure}[!h]
+%  \begin{center}
+%     \includegraphics[width=0.49\textwidth]{Param_PerfectPFA_vs_E.pdf}
+%     \includegraphics[width=0.49\textwidth]{Param_Res_vs_E.pdf}
+%     \caption{\label{}}
+%  \end{center}
+%\end{figure}
+
+\section{Novel ECAL Models}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{TwoG_Context_15mm.pdf}
+     \includegraphics[width=0.49\textwidth]{ThreeG_Context_15mm.pdf}
+     \caption{\label{}}
+  \end{center}
+\end{figure}
+
+%\begin{figure}[!h]
+%  \begin{center}
+%     \includegraphics[width=0.49\textwidth]{TwoG_SecondCellSize.pdf}
+%     \includegraphics[width=0.49\textwidth]{TwoG_DividingLayer.pdf}
+%     \caption{\label{}}
+%  \end{center}
+%\end{figure}
+
+%\begin{figure}[!h]
+%  \begin{center}
+%     \includegraphics[width=0.49\textwidth]{ThreeG_Context_15mm.pdf}
+%     \includegraphics[width=0.49\textwidth]{ThreeG_Hybrid_15mm.pdf}
+%     \caption{\label{}}
+%  \end{center}
+%\end{figure}
+
+\section{Performance for Higher Energy Jets}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{HighEnergy_ResDiffAlgs.pdf}
+     \includegraphics[width=0.49\textwidth]{HighEnergy_ScWConf.pdf}
+     \caption{\label{}}
+  \end{center}
+\end{figure}
+
+\section{Summary}
+ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\section*{Acknowledgements}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
+iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
+consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\begin{thebibliography}{00}
+\end{thebibliography}
+  
+\end{document}

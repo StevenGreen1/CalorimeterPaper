@@ -1,0 +1,187 @@
+{
+//=========Macro generated from canvas: JER vs Material/JER vs Material
+//=========  (Tue Feb 24 23:09:06 2015) by ROOT version5.34/10
+   TCanvas *JER vs Material = new TCanvas("JER vs Material", "JER vs Material",0,0,2000,2000);
+   gStyle->SetOptTitle(0);
+   JER vs Material->Range(-139.7962,0.09638555,559.4346,6.120482);
+   JER vs Material->SetFillColor(0);
+   JER vs Material->SetBorderMode(0);
+   JER vs Material->SetBorderSize(2);
+   JER vs Material->SetLeftMargin(0.2);
+   JER vs Material->SetRightMargin(0.02);
+   JER vs Material->SetTopMargin(0.02);
+   JER vs Material->SetBottomMargin(0.15);
+   JER vs Material->SetFrameBorderMode(0);
+   JER vs Material->SetFrameBorderMode(0);
+   
+   TGraphErrors *gre = new TGraphErrors(5);
+   gre->SetName("Graph0");
+   gre->SetTitle("Jet Energy Resolution vs HCal Absorber Material, HCal Timing Cut 10 ns");
+   gre->SetFillColor(1);
+   gre->SetLineWidth(4);
+   gre->SetPoint(0,45.5,3.94159);
+   gre->SetPointError(0,0,0.0506541);
+   gre->SetPoint(1,100,3.09967);
+   gre->SetPointError(1,0,0.0397295);
+   gre->SetPoint(2,180,3.14291);
+   gre->SetPointError(2,0,0.0400313);
+   gre->SetPoint(3,250,3.23552);
+   gre->SetPointError(3,0,0.0462028);
+   gre->SetPoint(4,500,3.72493);
+   gre->SetPointError(4,0,0.0475604);
+   
+   TH1F *Graph_Graph1 = new TH1F("Graph_Graph1","Jet Energy Resolution vs HCal Absorber Material, HCal Timing Cut 10 ns",100,0.05,545.45);
+   Graph_Graph1->SetMinimum(1);
+   Graph_Graph1->SetMaximum(6);
+   Graph_Graph1->SetDirectory(0);
+   Graph_Graph1->SetStats(0);
+   Graph_Graph1->GetXaxis()->SetTitle("Jet Energy / GeV ");
+   Graph_Graph1->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph1->GetXaxis()->SetTitleOffset(1.1);
+   Graph_Graph1->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
+   Graph_Graph1->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph1->GetYaxis()->SetTitleOffset(1.2);
+   gre->SetHistogram(Graph_Graph1);
+   
+   gre->Draw("alp");
+   
+   gre = new TGraphErrors(5);
+   gre->SetName("Graph1");
+   gre->SetTitle("Jet Energy Resolution vs HCal Absorber Material, HCal Timing Cut 10 ns");
+   gre->SetFillColor(1);
+   gre->SetLineColor(2);
+   gre->SetLineWidth(4);
+   gre->SetPoint(0,45.5,3.91919);
+   gre->SetPointError(0,0,0.0531126);
+   gre->SetPoint(1,100,3.084);
+   gre->SetPointError(1,0,0.0395288);
+   gre->SetPoint(2,180,3.09602);
+   gre->SetPointError(2,0,0.0394341);
+   gre->SetPoint(3,250,3.18074);
+   gre->SetPointError(3,0,0.040642);
+   gre->SetPoint(4,500,3.72796);
+   gre->SetPointError(4,0,0.0475992);
+   
+   TH1F *Graph_Graph2 = new TH1F("Graph_Graph2","Jet Energy Resolution vs HCal Absorber Material, HCal Timing Cut 10 ns",100,0.05,545.45);
+   Graph_Graph2->SetMinimum(1);
+   Graph_Graph2->SetMaximum(6);
+   Graph_Graph2->SetDirectory(0);
+   Graph_Graph2->SetStats(0);
+   Graph_Graph2->GetXaxis()->SetTitle("Jet Energy / GeV ");
+   Graph_Graph2->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph2->GetXaxis()->SetTitleOffset(1.1);
+   Graph_Graph2->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
+   Graph_Graph2->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph2->GetYaxis()->SetTitleOffset(1.2);
+   gre->SetHistogram(Graph_Graph2);
+   
+   gre->Draw("");
+   
+   gre = new TGraphErrors(5);
+   gre->SetName("Graph2");
+   gre->SetTitle("Jet Energy Resolution vs HCal Absorber Material, HCal Timing Cut 10 ns");
+   gre->SetFillColor(1);
+   gre->SetLineColor(3);
+   gre->SetLineWidth(4);
+   gre->SetPoint(0,45.5,3.99122);
+   gre->SetPointError(0,0,0.0512919);
+   gre->SetPoint(1,100,3.29206);
+   gre->SetPointError(1,0,0.0421955);
+   gre->SetPoint(2,180,3.31503);
+   gre->SetPointError(2,0,0.0422237);
+   gre->SetPoint(3,250,3.4779);
+   gre->SetPointError(3,0,0.0469088);
+   gre->SetPoint(4,500,4.3614);
+   gre->SetPointError(4,0,0.0570373);
+   
+   TH1F *Graph_Graph3 = new TH1F("Graph_Graph3","Jet Energy Resolution vs HCal Absorber Material, HCal Timing Cut 10 ns",100,0.05,545.45);
+   Graph_Graph3->SetMinimum(1);
+   Graph_Graph3->SetMaximum(6);
+   Graph_Graph3->SetDirectory(0);
+   Graph_Graph3->SetStats(0);
+   Graph_Graph3->GetXaxis()->SetTitle("Jet Energy / GeV ");
+   Graph_Graph3->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph3->GetXaxis()->SetTitleOffset(1.1);
+   Graph_Graph3->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
+   Graph_Graph3->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph3->GetYaxis()->SetTitleOffset(1.2);
+   gre->SetHistogram(Graph_Graph3);
+   
+   gre->Draw("");
+   
+   gre = new TGraphErrors(5);
+   gre->SetName("Graph3");
+   gre->SetTitle("Jet Energy Resolution vs HCal Absorber Material, HCal Timing Cut 10 ns");
+   gre->SetFillColor(1);
+   gre->SetLineColor(4);
+   gre->SetLineWidth(4);
+   gre->SetPoint(0,45.5,3.96047);
+   gre->SetPointError(0,0,0.0508967);
+   gre->SetPoint(1,100,3.22429);
+   gre->SetPointError(1,0,0.0413269);
+   gre->SetPoint(2,180,3.30987);
+   gre->SetPointError(2,0,0.0444367);
+   gre->SetPoint(3,250,3.43779);
+   gre->SetPointError(3,0,0.0463552);
+   gre->SetPoint(4,500,4.22484);
+   gre->SetPointError(4,0,0.0539434);
+   
+   TH1F *Graph_Graph4 = new TH1F("Graph_Graph4","Jet Energy Resolution vs HCal Absorber Material, HCal Timing Cut 10 ns",100,0.05,545.45);
+   Graph_Graph4->SetMinimum(1);
+   Graph_Graph4->SetMaximum(6);
+   Graph_Graph4->SetDirectory(0);
+   Graph_Graph4->SetStats(0);
+   Graph_Graph4->GetXaxis()->SetTitle("Jet Energy / GeV ");
+   Graph_Graph4->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph4->GetXaxis()->SetTitleOffset(1.1);
+   Graph_Graph4->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
+   Graph_Graph4->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph4->GetYaxis()->SetTitleOffset(1.2);
+   gre->SetHistogram(Graph_Graph4);
+   
+   gre->Draw("");
+   
+   TLegend *leg = new TLegend(0.5,0.75,0.95,0.95,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(19);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("Graph0","Steel QGSP_BERT","lpe");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(4);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("Graph1","Steel QGSP_BERT_HP","lpe");
+   entry->SetLineColor(2);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(4);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("Graph2","Tungsten QGSP_BERT","lpe");
+   entry->SetLineColor(3);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(4);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("Graph3","Tungsten QGSP_BERT_HP","lpe");
+   entry->SetLineColor(4);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(4);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   JER vs Material->Modified();
+   JER vs Material->cd();
+   JER vs Material->SetSelected(JER vs Material);
+}

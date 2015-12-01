@@ -1,0 +1,210 @@
+{
+//=========Macro generated from canvas: JER vs OuterTPCRadius/JER vs OuterTPCRadius
+//=========  (Tue Mar 10 12:13:05 2015) by ROOT version5.34/10
+   TCanvas *JER vs OuterTPCRadius = new TCanvas("JER vs OuterTPCRadius", "JER vs OuterTPCRadius",0,0,2000,2000);
+   gStyle->SetOptTitle(0);
+   JER vs OuterTPCRadius->Range(-1.130769,0.09638555,5.023077,6.120482);
+   JER vs OuterTPCRadius->SetFillColor(0);
+   JER vs OuterTPCRadius->SetBorderMode(0);
+   JER vs OuterTPCRadius->SetBorderSize(2);
+   JER vs OuterTPCRadius->SetLeftMargin(0.2);
+   JER vs OuterTPCRadius->SetRightMargin(0.02);
+   JER vs OuterTPCRadius->SetTopMargin(0.02);
+   JER vs OuterTPCRadius->SetBottomMargin(0.15);
+   JER vs OuterTPCRadius->SetFrameBorderMode(0);
+   JER vs OuterTPCRadius->SetFrameBorderMode(0);
+   
+   TGraphErrors *gre = new TGraphErrors(5);
+   gre->SetName("Graph0");
+   gre->SetTitle("Jet Energy Resolution vs TPC Outer Radius, HCal Timing Cut 10 ns");
+   gre->SetFillColor(1);
+   gre->SetLineWidth(6);
+   gre->SetPoint(0,0.5,4.34689);
+   gre->SetPointError(0,0,0.0558627);
+   gre->SetPoint(1,1.5,4.13295);
+   gre->SetPointError(1,0,0.0531132);
+   gre->SetPoint(2,2.5,3.97682);
+   gre->SetPointError(2,0,0.0511068);
+   gre->SetPoint(3,3.5,3.92505);
+   gre->SetPointError(3,0,0.0504415);
+   gre->SetPoint(4,4.5,3.94221);
+   gre->SetPointError(4,0,0.050662);
+   
+   TH1F *Graph_Graph1 = new TH1F("Graph_Graph1","Jet Energy Resolution vs TPC Outer Radius, HCal Timing Cut 10 ns",5,0.1,4.9);
+   Graph_Graph1->SetMinimum(1);
+   Graph_Graph1->SetMaximum(6);
+   Graph_Graph1->SetDirectory(0);
+   Graph_Graph1->SetStats(0);
+   Graph_Graph1->GetXaxis()->SetTitle("Outer TPC Radius [mm]");
+   Graph_Graph1->GetXaxis()->SetBinLabel(1,"1208");
+   Graph_Graph1->GetXaxis()->SetBinLabel(2,"1408");
+   Graph_Graph1->GetXaxis()->SetBinLabel(3,"1608");
+   Graph_Graph1->GetXaxis()->SetBinLabel(4,"1808");
+   Graph_Graph1->GetXaxis()->SetBinLabel(5,"2008");
+   Graph_Graph1->GetXaxis()->SetNdivisions(-5);
+   Graph_Graph1->GetXaxis()->SetLabelSize(0.06);
+   Graph_Graph1->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph1->GetXaxis()->SetTitleOffset(1.1);
+   Graph_Graph1->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
+   Graph_Graph1->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph1->GetYaxis()->SetTitleOffset(1.2);
+   gre->SetHistogram(Graph_Graph1);
+   
+   gre->Draw("alp");
+   
+   gre = new TGraphErrors(5);
+   gre->SetName("Graph1");
+   gre->SetTitle("Graph");
+   gre->SetFillColor(1);
+   gre->SetLineColor(2);
+   gre->SetLineWidth(6);
+   gre->SetPoint(0,0.5,3.80322);
+   gre->SetPointError(0,0,0.0487472);
+   gre->SetPoint(1,1.5,3.5311);
+   gre->SetPointError(1,0,0.0452594);
+   gre->SetPoint(2,2.5,3.34397);
+   gre->SetPointError(2,0,0.0428608);
+   gre->SetPoint(3,3.5,3.1374);
+   gre->SetPointError(3,0,0.0402132);
+   gre->SetPoint(4,4.5,3.03301);
+   gre->SetPointError(4,0,0.0388751);
+   
+   TH1F *Graph_Graph2 = new TH1F("Graph_Graph2","Graph",100,0.1,4.9);
+   Graph_Graph2->SetMinimum(2.908352);
+   Graph_Graph2->SetMaximum(3.93775);
+   Graph_Graph2->SetDirectory(0);
+   Graph_Graph2->SetStats(0);
+   gre->SetHistogram(Graph_Graph2);
+   
+   gre->Draw("");
+   
+   gre = new TGraphErrors(5);
+   gre->SetName("Graph2");
+   gre->SetTitle("Graph");
+   gre->SetFillColor(1);
+   gre->SetLineColor(3);
+   gre->SetLineWidth(6);
+   gre->SetPoint(0,0.5,3.90194);
+   gre->SetPointError(0,0,0.0496992);
+   gre->SetPoint(1,1.5,3.57338);
+   gre->SetPointError(1,0,0.0455143);
+   gre->SetPoint(2,2.5,3.33677);
+   gre->SetPointError(2,0,0.0425005);
+   gre->SetPoint(3,3.5,3.05526);
+   gre->SetPointError(3,0,0.038915);
+   gre->SetPoint(4,4.5,3.00638);
+   gre->SetPointError(4,0,0.0403514);
+   
+   TH1F *Graph_Graph3 = new TH1F("Graph_Graph3","Graph",100,0.1,4.9);
+   Graph_Graph3->SetMinimum(2.867468);
+   Graph_Graph3->SetMaximum(4.0502);
+   Graph_Graph3->SetDirectory(0);
+   Graph_Graph3->SetStats(0);
+   gre->SetHistogram(Graph_Graph3);
+   
+   gre->Draw("");
+   
+   gre = new TGraphErrors(5);
+   gre->SetName("Graph3");
+   gre->SetTitle("Graph");
+   gre->SetFillColor(1);
+   gre->SetLineColor(4);
+   gre->SetLineWidth(6);
+   gre->SetPoint(0,0.5,4.05319);
+   gre->SetPointError(0,0,0.0544359);
+   gre->SetPoint(1,1.5,3.75828);
+   gre->SetPointError(1,0,0.0480215);
+   gre->SetPoint(2,2.5,3.4311);
+   gre->SetPointError(2,0,0.0489508);
+   gre->SetPoint(3,3.5,3.16287);
+   gre->SetPointError(3,0,0.0451793);
+   gre->SetPoint(4,4.5,3.07791);
+   gre->SetPointError(4,0,0.0437563);
+   
+   TH1F *Graph_Graph4 = new TH1F("Graph_Graph4","Graph",100,0.1,4.9);
+   Graph_Graph4->SetMinimum(2.926806);
+   Graph_Graph4->SetMaximum(4.214973);
+   Graph_Graph4->SetDirectory(0);
+   Graph_Graph4->SetStats(0);
+   gre->SetHistogram(Graph_Graph4);
+   
+   gre->Draw("");
+   
+   gre = new TGraphErrors(5);
+   gre->SetName("Graph4");
+   gre->SetTitle("Graph");
+   gre->SetFillColor(1);
+   gre->SetLineColor(6);
+   gre->SetLineWidth(6);
+   gre->SetPoint(0,0.5,4.55451);
+   gre->SetPointError(0,0,0.0581527);
+   gre->SetPoint(1,1.5,4.39164);
+   gre->SetPointError(1,0,0.0560731);
+   gre->SetPoint(2,2.5,4.04835);
+   gre->SetPointError(2,0,0.05169);
+   gre->SetPoint(3,3.5,3.80596);
+   gre->SetPointError(3,0,0.0485951);
+   gre->SetPoint(4,4.5,3.68446);
+   gre->SetPointError(4,0,0.0470437);
+   
+   TH1F *Graph_Graph5 = new TH1F("Graph_Graph5","Graph",100,0.1,4.9);
+   Graph_Graph5->SetMinimum(3.539892);
+   Graph_Graph5->SetMaximum(4.710187);
+   Graph_Graph5->SetDirectory(0);
+   Graph_Graph5->SetStats(0);
+   gre->SetHistogram(Graph_Graph5);
+   
+   gre->Draw("");
+   
+   TLegend *leg = new TLegend(0.8,0.25,1,0.45,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(19);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("Graph0","45 GeV Jets","lpe");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(6);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("Graph1","100 GeV Jets","lpe");
+   entry->SetLineColor(2);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(6);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("Graph2","180 GeV Jets","lpe");
+   entry->SetLineColor(3);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(6);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("Graph3","250 GeV Jets","lpe");
+   entry->SetLineColor(4);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(6);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("Graph4","500 GeV Jets","lpe");
+   entry->SetLineColor(6);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(6);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   JER vs OuterTPCRadius->Modified();
+   JER vs OuterTPCRadius->cd();
+   JER vs OuterTPCRadius->SetSelected(JER vs OuterTPCRadius);
+}

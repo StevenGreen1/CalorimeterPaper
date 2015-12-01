@@ -1,0 +1,678 @@
+%%% Style file for part III particles course
+%%% Version 1.1: © M.Thomson 2011
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                     particles                        
+\renewcommand\Re{\operatorname{\mathfrak{Re}}}
+\renewcommand\Im{\operatorname{\mathfrak{Im}}}
+\newcommand{\Particle}[1]{\mathrm{#1}}
+\newcommand{\Quark}[1]{\mathrm{#1}}
+\newcommand{\AntiQuark}[1]{\overline{\Quark{#1}}}
+\renewcommand{\o}[1]{\overline{#1}}
+\renewcommand{\arraycolsep}{1.0mm}
+\newcommand{\etal}{{\it et al.}}  
+%%%%%%%% units 
+\def\barn{\text{b}}
+\def\pb{\text{pb}}
+\def\fb{\text{fb}}
+\def\MeV{\text{MeV}}
+\def\GeV{\text{GeV}}
+\def\TeV{\text{TeV}}
+\def\degrees{^\circ}
+\def\kB{k_\mathrm{B}}
+%%%%%% leptons
+\def\lepton{\ell}
+\def\electron{\Particle{e}}
+\def\ferm{\Particle{f}}
+\def\Aferm{\overline{\ferm}}
+\def\ff{\ferm\Aferm}
+\def\muon{\muup}
+\def\tauon{\tauup}
+\def\eplus{\electron^+}
+\def\eminus{\electron^-}
+\def\adje{\adj{\electron}}
+\def\epm{\electron^\pm}
+\def\epem{\eplus\eminus}
+\def\mplus{\muon^+}
+\def\mminus{\muon^-}
+\def\mpmm{\mplus\mminus}
+\def\tplus{\tauon^+}
+\def\tminus{\tauon^-}
+\def\tptm{\tplus\tminus}
+\def\neutrino{\nuup}
+\def\Aneutrino{\overline{\neutrino}}
+\def\nue{\neutrino_\electron}
+\def\nul{\neutrino_L}
+\def\nur{\neutrino_R}
+\def\el{\electron_L}
+\def\er{\electron_R}
+\def\fl{\ferm_L}
+\def\fr{\ferm_R}
+\def\ul{u_L}
+\def\ur{u_R}
+\def\adjnul{\adj{\neutrino}_L}
+\def\adjnur{\adj{\neutrino}_R}
+\def\adjel{\adj{\electron}_L}
+\def\adjer{\adj{\electron}_R}
+\def\adjfl{\adj{\ferm}_L}
+\def\adjfr{\adj{\ferm}_R}
+\def\adjul{\adj{u}_L}
+\def\adjur{\adj{u}_R}
+\def\adjnu{\adj{\neutrino}}
+\def\Qe{Q_\electron}
+\def\numu{\neutrino_\muon}
+\def\nutau{\neutrino_\tauon}
+\def\lepton{\ell}
+\def\lminus{\lepton^-}
+\def\lplus{\lepton^+}
+\def\lplm{\lplus\lminus}
+\def\nuell{\neutrino_\lepton}
+\def\Anue{\Aneutrino_\electron}
+\def\Anumu{\Aneutrino_\muon}
+\def\Anutau{\Aneutrino_\tauon}
+\def\Anuell{\Aneutrino_\ell}
+\def\Anuellp{\Aneutrino_{\ell^\prime}}
+\def\nuone{\neutrino_1}
+\def\nutwo{\neutrino_2}
+\def\nuthree{\neutrino_3}
+%%%                   quarks                              %%%   
+\def\Qu{\Quark{u}}
+\def\Qd{\Quark{d}}
+\def\Qc{\Quark{c}}
+\def\Qs{\Quark{s}}
+\def\Qt{\Quark{t}}
+\def\Qb{\Quark{b}}
+\def\Qq{\Quark{q}}
+\def\AQu{\AntiQuark{u}}
+\def\AQd{\AntiQuark{d}}
+\def\AQc{\AntiQuark{c}}
+\def\AQs{\AntiQuark{s}}
+\def\AQt{\AntiQuark{t}}
+\def\AQb{\AntiQuark{b}}
+\def\neutron{\Particle{n}}
+\def\AQq{\AntiQuark{q}}
+%%%                baryons
+\def\proton{\Particle{p}}
+\def\neutron{\Particle{n}}
+\def\baryon{\Particle{B}}
+\def\nucleon{\Particle{N}}
+\def\pAp{\proton\Aproton}
+\def\Aproton{\overline{\proton}}
+\def\Abaryon{\overline{\baryon}}
+\def\pp{\proton\proton}
+\def\rproton{r_\proton}
+\def\deuteron{\Particle{d}}
+\def\nAB{n_\Abaryon}
+%%%                   mesons                               %%%
+\def\etameson{\etaup}
+\def\etaprime{\etameson^\prime}
+\def\chimeson{\chiup}
+\def\pion{\piup}
+\def\pip{\pion^+}
+\def\pim{\pion^-}
+\def\pipm{\pion^\pm}
+\def\piz{\pion^0}
+\def\kaon{\Particle{K}}
+\def\Bmeson{\Particle{B}}
+\def\Dmeson{\Particle{D}}
+\def\Bbar{\overline{\Bmeson}}
+\def\Bz{\Bmeson^0}
+\def\Bp{\Bmeson^+}
+\def\Bm{\Bmeson^-}
+\def\Bzbar{\overline{\Bmeson}{}^0}
+\def\Bzs{\Bz_\Qs}
+\def\Bzsbar{\Bzbar_\Qs}
+\def\Dz{\Dmeson^{0}}
+\def\Dzbar{\overline{\Dmeson}{}^0}
+\def\Dpstar{\Dmeson^{+*}}
+\def\Dsp{\Dmeson_s^{+}}
+\def\Kpm{\kaon^\pm}
+\def\Kone{\kaon_1}
+\def\Ktwo{\kaon_2}
+\def\KS{\kaon_S}
+\def\BH{\Bmeson_H}
+\def\BL{\Bmeson_L}
+\def\KL{\kaon_L}
+\def\Kp{\kaon^+}
+\def\Km{\kaon^-}
+\def\Dp{\Dmeson^+}
+\def\Dm{\Dmeson^-}
+\def\Kstarpm{\kaon^{*\pm}}
+\def\Kz{\kaon^0}
+\def\Kzbar{\overline{\kaon}{}^0}
+\def\Kzstar{\kaon^{*0}}
+\def\Kzstarbar{\bar{\kaon}^{*0}}
+\def\rhomeson{\rhoup}
+\def\omegameson{\omegaup}
+\def\phimeson{\phiup}
+\def\rhoz{\rhomeson^0}
+\def\rhop{\rhomeson^+}
+\def\rhopm{\rhomeson^\pm}
+\def\rhom{\rhomeson^-}
+\def\Jpsi{\Particle{J}/\psiup}
+\def\psimeson{\psiup}
+\def\psiprime{\psiup^\prime}
+\def\PDelta{\Delta}
+%% bosons
+\def\Zzero{\Particle{Z}}
+\def\Wboson{\Particle{W}}
+\def\Wp{\Wboson^+}
+\def\Wm{\Wboson^-}
+\def\Wpm{\Wboson^\pm}
+\def\WW{\Wp\Wm}
+\def\ep{\eminus\proton}
+\def\eq{\eminus\Qq}
+\def\Gluon{\Particle{g}}
+\def\gluon{\Gluon}
+\def\G{\Gluon}
+\def\Higgs{\Particle{H}}
+\def\photon{\gammaup}
+%% kimematic variables
+\def\pT{p_{\mathrm{T}}}
+%% masses
+\def\Higgsz{\Particle{H}}
+\def\mproton{m_\proton}
+\def\me{m_\electron}
+\def\mZ{m_{\Zzero}}
+\def\mH{m_{\Higgsz}}
+\def\GZ{\Gamma_{\Zzero}}
+\def\GW{\Gamma_{\Wboson}}
+\def\higgs{\Particle{h}}
+\def\mW{m_{\Wboson}}
+\def\mtop{m_{\Qt}}
+\def\Gtop{\Gamma_{\Qt}}
+\def\mWsq{m_{\Wboson}^2}
+%% colour
+\def\Cr{r}
+\def\Cb{b}
+\def\Cg{g}
+\def\CAr{\overline{\Cr}}
+\def\CAb{\overline{\Cb}}
+\def\CAg{\overline{\Cg}}
+%% general
+\def\ME{{\cal{M}}}
+\def\atom#1{\mbox{$\mathrm{#1}$}}
+\def\nucleus#1#2{\mbox{$^{#2}\mathrm{#1}$}}
+\def\nucleusfull#1#2#3{\mbox{$^{#2}_{#3}\mathrm{#1}$}}
+\def\percent{\,\%}
+\def\half{\mbox{$\frac{1}{2}$}}
+\def\quarter{\mbox{$\frac{1}{4}$}}
+\def\third{\mbox{$\frac{1}{3}$}}
+\def\thalf{\mbox{$\frac{3}{2}$}}
+\def\oroot#1{\mbox{$\frac{1}{\sqrt{#1}}$}}
+\def\sfrac#1#2{\mbox{$\frac{#1}{#2}$}} 
+\def\ua{\uparrow}
+\def\da{\downarrow}
+\def\Qdd{\Qd\!\downarrow\!}
+\def\Qdu{\Qd\!\uparrow\!}
+\def\Qud{\Qu\!\downarrow\!}
+\def\Quu{\Qu\!\uparrow\!}
+\def\qandq{\quad\text{and}\quad}
+\def\LD{{\cal{L}}}
+\def\radlength{X_0}
+%% coupling constants
+%\def\alphaem{\alpha_{em}}
+\def\alphaem{\alpha}
+\def\alphas{\alpha_S}
+\def\alphaw{\alpha_W}
+\def\GF{G_\mathrm{F}}
+\def\GFsq{G^2_\mathrm{F}}
+\def\gW{g_\Wboson}
+\def\gS{g_S}
+\def\gw{g}
+\def\thetaW{\theta_\text{W}}
+\def\gZ{g_\Zzero}
+\def\gprime{g^\prime}
+\def\gWsq{g_{\Wboson}^2}
+%% quantum mechanics
+\def\braket#1#2#3{\langle#1|#2|#3\rangle}
+\def\bk#1#2{\langle#1|#2\rangle}
+\def\innerproduct#1#2{\langle#1|#2\rangle}
+\def\ket#1#2{\left|#1,#2\right\rangle}
+\def\oket#1{|#1\rangle}
+\def\bra#1#2{\langle#1,#2|}
+\def\obra#1{\langle#1|}
+\def\expval#1{\left\langle#1\right\rangle}
+\def\sexpval#1{\langle#1\rangle}
+\def\Mfi{\ME_{fi}}
+\def\com#1#2{\left[#1,#2\right]}
+\def\halfG{\mbox{$\frac{\Gamma}{2}$}}
+%% derivatives
+\def\d#1{\mathrm{d}#1}
+\def\dbyd#1#2{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\def\pbyp#1#2{\frac{\partial#1}{\partial#2}}
+\def\pbypp#1#2#3{\frac{\partial^2#1}{\partial#2\partial#3}}
+\def\pbypsq#1#2{\frac{\partial^2#1}{\partial#2^2}}
+\def\dbydd#1#2#3{\frac{\mathrm{d}^2#1}{\mathrm{d}#2\,\mathrm{d}#3}}
+\def\dbyddd#1#2#3#4{\frac{\mathrm{d}^3#1}{\mathrm{d}#2\,\mathrm{d}#3\,\mathrm{d}#4}}
+%% vectors
+\renewcommand{\vec}[1]{\boldsymbol{\mathrm{#1}}}
+\renewcommand{\matrix}[1]{\boldsymbol{\mathrm{#1}}}
+\newcommand{\modvec}[1]{\mathrm{#1}}
+\newcommand{\mvv}{\modvec{v}}
+\newcommand{\mvp}{\modvec{p}}
+\newcommand{\mvr}{\modvec{r}}
+\newcommand{\vcross}{\boldsymbol{\times}}
+\newcommand{\vdot}{\boldsymbol{\cdot}}
+\newcommand{\uvec}[1]{\vec{\hat{#1}}} 
+\newcommand{\gghadrons}{\mbox{$\photon\photon\rightarrow\text{hadrons}$}}
+%% four vectors
+\newcommand{\fdot}{\!\cdot\!}
+\newcommand{\sfdot}{\cdot}
+%% matrix notation
+\newcommand{\mat}[1]{#1}
+\def\unity{{I}}
+\def\identity{I}
+\def\trace#1{\mathrm{Tr}(#1)}
+%% operators
+\newcommand{\elll}{\ell}
+\newcommand{\op}[1]{\hat{#1}}
+\newcommand{\opx}[1]{\hat{#1}_x}
+\newcommand{\opy}[1]{\hat{#1}_y}
+\newcommand{\opz}[1]{\hat{#1}_z}
+\newcommand{\opp}[1]{\hat{#1}_+}
+\newcommand{\oppm}[1]{\hat{#1}_\pm}
+\newcommand{\opm}[1]{\hat{#1}_-}
+\newcommand{\opsq}[1]{\hat{#1}^2}
+\newcommand{\vecop}[1]{\vec{\op{#1}}}
+%% pre-defined operators
+\def\Uop{\op{U}}
+\def\Hop{\op{H}}
+\def\HopW{\Hop_{W}}
+\def\HopEM{\Hop_{EM}}
+\def\HopS{\Hop_{S}}
+\def\HopQ{\Hop_{QCD}}
+\def\Aop{\op{A}}
+\def\Hpert{\op{H}^\prime}
+\def\Gop{\op{G}}
+\def\Szop{\op{S}_{\!z}}
+\def\Szopv{\op{S}_{\!z}^{(v)}}
+\def\Pop{\op{P}}
+\def\Cop{\op{C}}
+\def\Top{\op{T}}
+\def\CPop{\Cop\Pop}
+\def\CPTop{\Cop\Pop\Top}
+\def\PopD{\Pop^\dagger}
+\def\UopD{\op{U}^\dagger}
+\def\GopD{\op{G}^\dagger}
+\def\Fop{\hat{F}}
+\def\FopD{\hat{F}^\dagger}
+\def\Prightarrow{\stackrel{\Pop}\longrightarrow}
+\def\Crightarrow{\stackrel{\Cop}\longrightarrow}
+\def\Trightarrow{\stackrel{\Top}\longrightarrow}
+\def\CPrightarrow{\stackrel{\CPop}\longrightarrow}
+\def\CPTrightarrow{\stackrel{\CPTop}\longrightarrow}
+\def\Lopp{\opp{L}}
+\def\Lopm{\opm{L}}
+\def\Loppm{\oppm{L}}
+\def\Lopx{\opx{L}}
+\def\Lopy{\opy{L}}
+\def\Lopz{\opz{L}}
+\def\Lopsq{\opsq{L}}
+%% groups
+\def\SU#1{\mathrm{SU}(#1)}
+\def\U#1{\mathrm{U}(#1)}
+\def\order#1{{\cal{O}}({#1})}
+%% isospin
+\def\IW{I_\text{W}}
+\def\IWT{\IW^{(3)}}
+\def\dwL{\varphi_L}
+\def\adwL{\adj{\varphi}_L}
+\def\dw{\varphi}
+\def\adw{\adj{\varphi}}
+\def\IsoT{\op{T}}
+\def\Yop{\op{Y}}
+\def\Iso#1#2{\left|#1,#2\right\rangle}
+\def\AIso#1#2{\overline{\left|#1,#2\right\rangle}}
+\def\Isoff#1#2#3{\mbox{$          \left|    \frac{#1}{2},#2\frac{#3}{2}   \right\rangle   $}}
+\def\Isof#1#2#3{\mbox{$  \phi \left(    \frac{#1}{2},#2\frac{#3}{2}   \right)             $}}
+\def\Isop#1#2#3{\mbox{$  \phi \left(    \frac{#1}{2},#2\frac{#3}{2}   \right)             $}}
+\def\isow#1#2{\mbox{$  \phi \left(    #1 , #2   \right)             $}}
+\def\IsopS#1#2#3{\mbox{$  \phi_S \left(    \frac{#1}{2},#2\frac{#3}{2}   \right)             $}}
+\def\IsopA#1#2#3{\mbox{$  \phi_A \left(    \frac{#1}{2},#2\frac{#3}{2}   \right)             $}}
+\def\SIsop#1#2#3{\mbox{$  \chi \left(    \frac{#1}{2},#2\frac{#3}{2}   \right)             $}}
+\def\SIsopS#1#2#3{\mbox{$  \chi_S \left(    \frac{#1}{2},#2\frac{#3}{2}   \right)             $}}
+\def\SIsopA#1#2#3{\mbox{$  \chi_A \left(    \frac{#1}{2},#2\frac{#3}{2}   \right)             $}}
+%% spinors
+\def\pslash{\slashed{p}}
+\newcommand{\adj}[1]{\overline{#1}}
+\def\apsi{\overline{\psi}}
+\def\spinor#1{ \left( 
+                      \begin{array}{c} 
+                              #1_1 \\ #1_2 \\ #1_3 \\ #1_4
+                      \end{array}
+               \right)  }
+\def\Spinor#1#2#3#4{ \left( 
+                      \begin{array}{c} 
+                              #1 \\ #2 \\ #3 \\ #4
+                      \end{array}
+               \right)  }
+\def\SlimSpinor#1#2#3#4{ \renewcommand{\arraycolsep}{0.0mm} 
+               \left( 
+                      \begin{array}{c} 
+                              #1 \\ #2 \\ #3 \\ #4
+                      \end{array}
+               \right)  }
+\def\uone{ \Spinor{1}{0}{\frac{p_z}{E+m}}{\frac{p_x+ip_y}{E+m}}}
+\def\utwo{ \Spinor{0}{1}{\frac{p_x-ip_y}{E+m}}{\frac{-p_z}{E+m}}}
+\def\uthree{\Spinor{\frac{p_z}{E-m}}{\frac{p_x+ip_y}{E-m}}{1}{0}}
+\def\ufour{\Spinor{\frac{p_x-ip_y}{E-m}}{\frac{-p_z}{E-m}}{0}{1}}
+\def\vone{\Spinor{\frac{p_x-ip_y}{E+m}}{\frac{-p_z}{E+m}}{0}{1}}
+\def\vtwo{\Spinor{\frac{p_z}{E+m}}{\frac{p_x+ip_y}{E+m}}{1}{0}}
+\def\vthree{\Spinor{1}{0}{\frac{p_z}{E-m}}{\frac{p_x+ip_y}{E-m}}}
+\def\vfour{\Spinor{0}{1}{\frac{p_x-ip_y}{E-m}}{\frac{-p_z}{E-m}}}
+\def\uoneSlim{ \SlimSpinor{1}{0}{\frac{p_z}{E+m}}{\frac{p_x+ip_y}{E+m}}}
+\def\utwoSlim{ \SlimSpinor{0}{1}{\frac{p_x-ip_y}{E+m}}{\frac{-p_z}{E+m}}}
+\def\uthreeSlim{\SlimSpinor{\frac{p_z}{E-m}}{\frac{p_x+ip_y}{E-m}}{1}{0}}
+\def\ufourSlim{\SlimSpinor{\frac{p_x-ip_y}{E-m}}{\frac{-p_z}{E-m}}{0}{1}}
+\def\voneSlim{\SlimSpinor{\frac{p_x-ip_y}{E+m}}{\frac{-p_z}{E+m}}{0}{1}}
+\def\vtwoSlim{\SlimSpinor{\frac{p_z}{E+m}}{\frac{p_x+ip_y}{E+m}}{1}{0}}
+\def\vthreeSlim{\SlimSpinor{1}{0}{\frac{p_z}{E-m}}{\frac{p_x+ip_y}{E-m}}}
+\def\vfourSlim{\SlimSpinor{0}{1}{\frac{p_x-ip_y}{E-m}}{\frac{-p_z}{E-m}}}
+%%
+\def\vs{\vec{\sigma}}
+\def\vp{\vec{p}}
+\def\va{\vec{A}}
+\def\vb{\vec{B}}
+\def\vn{\vec{\nabla}}
+\def\dal{\square}
+\def\tot{\left( \frac{\theta}{2}\right) }
+%% four vectors
+\def\jmu{j^{\,\mu}}
+\def\xmu{x^{\,\mu}}
+\def\pmu{p^{\,\mu}}
+\def\amu{a^{\,\mu}}
+\def\bmu{b^{\,\mu}}
+\def\dmu{\partial^{\,\mu}}
+\def\fvector#1#2#3#4{  \left( \begin{array}{c} 
+                              #1 \\ #2 \\ #3 \\ #4
+                               \end{array} 
+                       \right)  }
+\def\nfvector#1#2#3#4{\renewcommand{\arraystretch}{1.0}\renewcommand{\arraycolsep}{0.00mm}    \left( \begin{array}{c} 
+                              #1 \\ #2 \\ #3 \\ #4
+                               \end{array} 
+\right) \renewcommand{\arraystretch}{1.0}\renewcommand{\arraycolsep}{1.00mm}  }
+\def\tvector#1#2{\left( \begin{array}{c} 
+                              #1 \\ #2 
+                     \end{array}\right)  }
+\def\trowvector#1#2{\left( \begin{array}{cc} 
+                              #1 & #2 
+                     \end{array}\right)  }
+\def\ttvector#1#2{  \left( \begin{array}{c} 
+                              #1 \\ #2 
+                     \end{array}\right)  }
+\def\tthvector#1#2#3{  \left( \begin{array}{c} 
+                              #1 \\ #2 \\ #3 
+                     \end{array}\right)  }            
+\def\thvector#1#2#3{  \left( \begin{array}{c} 
+                              #1 \\ #2 \\ #3 
+\end{array}\right)  }                   
+\def\trvector#1#2{\renewcommand{\arraystretch}{0.7}\renewcommand{\arraycolsep}{0.00mm}  \left( \begin{array}{r} 
+                              #1 \\ #2 
+                     \end{array}\right)  }
+%% gamma matrices
+\def\gammamu{\gamma^{\,\mu}}
+\def\gammak{\gamma^{\,k}}
+\def\gmunu{g^{\,\mu\nu}}
+\def\gammanu{\gamma^{\nu}}
+\def\gammarho{\gamma^{\,\rho}}         
+\def\gammasigma{\gamma^{\sigma}}                
+\def\gammaz{\left( \begin{array}{rrrr}
+                      1 & 0 & 0 & 0 \\
+                      0 & 1 & 0 & 0 \\
+                      0 & 0 & \mbox{-1}& 0  \\
+                      0 & 0 & 0 & \mbox{-1} 
+                 \end{array}\right)  }
+\def\gammao{\left( \begin{array}{rrrr}
+                      0 & 0 & 0 & 1 \\
+                      0 & 0 & 1 & 0 \\
+                      0  & \mbox{-1}& 0&0  \\
+                      \mbox{-1} &0&0&0
+                 \end{array}\right)  }
+\def\gammat{\left( \begin{array}{rrrr}
+                      0 & 0 & 0 & \mbox{-}i \\
+                      0 & 0 & i & 0 \\
+                      0 & i & 0 & 0  \\
+                      \mbox{-}i & 0 & 0 & 0 
+                 \end{array}\right)  }
+
+\def\gammath{\left( \begin{array}{rrrr}
+                      0 & 0 & 1 & 0 \\
+                      0 & 0 & 0 & \mbox{-}1\\
+                      \mbox{-1} & 0 & 0& 0  \\
+                      0 & 1 & 0 & 0 
+                 \end{array}\right)  }
+\def\gammafive{\left( \begin{array}{rrrr}
+                      0 & 0 & 1 & 0 \\
+                      0 & 0 & 0 & 1 \\
+                      1 & 0 & 0& 0  \\
+                      0 & 1 & 0 & 0 
+                 \end{array}\right)  
+}
+\def\PL{\half \left( \begin{array}{rrrr}
+                      1 & 0 & -1 & 0 \\
+                      0 & 1 & 0 & -1 \\
+                      -1 & 0 & 1& 0  \\
+                      0 & -1 & 0 & 1 
+                 \end{array}\right)  
+}
+\def\PR{\half \left( \begin{array}{rrrr}
+                      1 & 0 & 1 & 0 \\
+                      0 & 1 & 0 & 1 \\
+                      1 & 0 & 1& 0  \\
+                      0 & 1 & 0 & 1 
+                 \end{array}\right)  
+}
+\def\diracbeta{ 
+                 \left( \begin{array}{cc}
+                      I & 0  \\
+                      0 & -I 
+                 \end{array}\right)  
+}
+\def\diracalphai{
+                 \left( \begin{array}{cc}
+                      0 & \sigma_i  \\
+                      \sigma_i & 0
+                 \end{array}\right)  
+}
+\def\diracalphaj{
+                 \left( \begin{array}{cc}
+                      0 & \sigma_j  \\
+                      \sigma_j & 0
+                 \end{array}\right)  
+}
+\def\paulix{
+                 \left( \begin{array}{cc}
+                      0 & 1  \\
+                      1 & 0 
+                 \end{array}\right)  
+}
+\def\pauliy{ 
+                 \left( \begin{array}{cc}
+                      0 & -i  \\
+                      i & 0 
+                 \end{array}\right)  
+}
+\def\pauliz{
+                 \left( \begin{array}{cc}
+                      1 & 0  \\
+                      0 & -1 
+                 \end{array}\right)  
+}
+\def\unit{\left( \begin{array}{cc}
+                      1 & 0  \\
+                      0 & 1 
+                 \end{array}\right)  }
+
+\def\sigmad{
+                 \left( \begin{array}{cc}
+                      \vec{\sigma} & 0  \\
+                      0 & \vec{\sigma} 
+                 \end{array}\right)  
+}
+
+
+\def\sigmax{
+     \left( \begin{array}{cccc}
+                      0 & 1 & 0 & 0 \\
+                      1 & 0 & 0 & 0 \\
+                      0 & 0 & 0 & 1  \\
+                      0 & 0 & 1 & 0 
+                 \end{array}\right)  
+}
+
+\def\sigmay{
+                 \left( \begin{array}{cccc}
+                      0 & -i & 0 & 0 \\
+                      i & 0 & 0 & 0 \\
+                      0 & 0 & 0 & -i  \\
+                      0 & 0 & i & 0 
+                 \end{array}\right)  
+}
+
+\def\sigmaz{
+                 \left( \begin{array}{cccc}
+                      1 & 0 & 0 & 0 \\
+                      0 & -1 & 0 & 0 \\
+                      0 & 0 & 1 & 0  \\
+                      0 & 0 & 0 & -1 
+                 \end{array}\right)  
+}
+\def\Fmunu{
+                 \left( \begin{array}{cccc}
+                      0 & -E_x & -E_y & -E_z \\
+                      E_x & 0 & -B_z & B_y \\
+                      E_y & B_z & 0 & -B_x  \\
+                      E_z & -B_y & B_x & 0 
+                 \end{array}\right)  
+}
+
+
+\def\twotwomatrix#1#2#3#4{
+           \left( \begin{array}{cc}
+                      #1 & #2  \\
+                      #3 & #4 
+                 \end{array}\right)  
+}
+\def\ttwotwomatrix#1#2#3#4{\renewcommand{\arraystretch}{1.2}\renewcommand{\arraycolsep}{0.75mm}
+           \left( \begin{array}{cc}
+                      #1 & #2  \\
+                      #3 & #4 
+                 \end{array}\right)  
+}
+\def\diagmatrixfour#1#2#3#4{ \left( \begin{array}{cccc}
+                      #1 & 0 & 0 & 0  \\
+                      0  & #2 & 0 &0 \\
+                      0 & 0 & #3 & 0 \\ 
+                      0 & 0 & 0 & #4 
+                 \end{array}\right)  }
+\def\S{ \left( \begin{array}{cccc}
+                      a & 0 & 0 & b \\
+                      0 & a & b & 0 \\
+                      0 & b & a & 0  \\
+                      b & 0 & 0 & a 
+                 \end{array}\right)  }
+\def\lorentz{\left( \begin{array}{cccc}
+                      \gamma & -\beta\gamma & 0 & 0 \\
+                      -\beta\gamma & \gamma & 0 & 0 \\
+                      0 & 0 & 1 & 0  \\
+                      0 & 0 & 0 & 1 
+                 \end{array}\right)  }
+%% Matrices
+ \def\tthreethreematrix#1#2#3#4#5#6#7#8#9{\renewcommand{\arraystretch}{1.0}\renewcommand{\arraycolsep}{0.75mm} \left( \begin{array}{rrr}
+                      #1 & #2 & #3 \\
+                      #4 & #5 & #6 \\
+                      #7 & #8 & #9  
+                 \end{array}\right)  }
+\def\tththmatrix#1#2#3#4#5#6#7#8#9{\renewcommand{\arraystretch}{1.0}\renewcommand{\arraycolsep}{0.75mm} \left( \begin{array}{rrr}
+                      #1 & #2 & #3 \\
+                      #4 & #5 & #6 \\
+                      #7 & #8 & #9  
+                 \end{array}\right)  }
+\def\tththmatrixc#1#2#3#4#5#6#7#8#9{\renewcommand{\arraystretch}{1.0}\renewcommand{\arraycolsep}{0.75mm} \left( \begin{array}{ccc}
+                      #1 & #2 & #3 \\
+                      #4 & #5 & #6 \\
+                      #7 & #8 & #9  
+                 \end{array}\right)  }
+\def\shorttthreethreematrix#1{\tthreethreematrix{#1_{11}}{#1_{12}}{#1_{13}}{#1_{21}}{#1_{22}}{#1_{23}}{#1_{31}}{#1_{32}}{#1_{33}} }
+%% Gell-Mann matrices
+\def\lambdax{\tthreethreematrix{1}{0}{0}{0}{0}{0}{0}{0}{-1} }
+\def\lambday{\tthreethreematrix{0}{0}{0}{0}{1}{0}{0}{0}{-1} }
+\def\lambdaone{\tthreethreematrix{0}{1}{0}{1}{0}{0}{0}{0}{0} }
+\def\lambdatwo{\tthreethreematrix{0}{-i}{0}{i}{0}{0}{0}{0}{0} }
+\def\lambdathree{\tthreethreematrix{1}{0}{0}{0}{-1}{0}{0}{0}{0} }
+\def\lambdaa{\tthreethreematrix{0}{0}{0}{0}{1}{0}{0}{0}{-1} }
+\def\lambdab{\tthreethreematrix{1}{0}{0}{0}{0}{0}{0}{0}{-1} }
+\def\lambdafour{\tthreethreematrix{0}{0}{1}{0}{0}{0}{1}{0}{0} }
+\def\lambdafive{\tthreethreematrix{0}{0}{-i}{0}{0}{0}{i}{0}{0} }
+\def\lambdasix{\tthreethreematrix{0}{0}{0}{0}{0}{1}{0}{1}{0} }
+\def\lambdaseven{\tthreethreematrix{0}{0}{0}{0}{0}{-i}{0}{i}{0} }
+\def\lambdaeight{\sfrac{1}{\sqrt{3}}\tthreethreematrix{1}{0}{0}{0}{1}{0}{0}{0}{-2} }
+%% PMNS elements
+\def\Ueone{U_{\electron1}}
+\def\Uetwo{U_{\electron2}}
+\def\Uethree{U_{\electron3}}
+\def\Umuone{U_{\muon1}}
+\def\Umutwo{U_{\muon2}}
+\def\Umuthree{U_{\muon3}}
+\def\Utauone{U_{\tauon1}}
+\def\Utautwo{U_{\tauon2}}
+\def\Utauthree{U_{\tauon3}}
+\def\Useone{U^*_{\electron1}}
+\def\Usetwo{U^*_{\electron2}}
+\def\Usethree{U^*_{\electron3}}
+\def\Usmuone{U^*_{\muon1}}
+\def\Usmutwo{U^*_{\muon2}}
+\def\Usmuthree{U^*_{\muon3}}
+\def\Ustauone{U^*_{\tauon1}}
+\def\Ustautwo{U^*_{\tauon2}}
+\def\Ustauthree{U^*_{\tauon3}}
+\def\UPMNS{\tththmatrix{\Ueone}{\Uetwo}{\Uethree}{\Umuone}{\Umutwo}{\Umuthree}{\Utauone}{\Utautwo}{\Utauthree} }
+\def\UsPMNS{
+ \tththmatrix{\Useone}{\Usmuone}{\Ustauone}{\Usetwo}{\Usmutwo}{\Ustautwo}{\Usethree}{\Usmuthree}{\Ustauthree} 
+}
+%% CKM
+\def\thetac{\theta_c}
+\def\sinthetac{\sin\thetac}
+\def\Vud{V_{\Qu\Qd}}
+\def\Vus{V_{\Qu\Qs}}
+\def\Vub{V_{\Qu\Qb}}
+\def\Vqd{V_{\Qq\Qd}}
+\def\Vqs{V_{\Qq\Qs}}
+\def\Vqb{V_{\Qq\Qb}}
+\def\Vudstar{V^*{}_{\!\!\!\!\Qu\Qd}}
+\def\Vusstar{V^*{}_{\!\!\!\!\Qu\Qs}}
+\def\Vubstar{V^*{}_{\!\!\!\!\Qu\Qb}}
+\def\Vcdstar{V^*{}_{\!\!\!\!\Qc\Qd}}
+\def\Vcsstar{V^*{}_{\!\!\!\!\Qc\Qs}}
+\def\Vcbstar{V^*{}_{\!\!\!\!\Qc\Qb}}
+\def\Vtdstar{V^*{}_{\!\!\!\!\Qt\Qd}}
+\def\Vtsstar{V^*{}_{\!\!\!\!\Qt\Qs}}
+\def\Vtbstar{V^*{}_{\!\!\!\!\Qt\Qb}}
+\def\Vqdstar{V^*{}_{\!\!\!\!\Qq\Qd}}
+\def\Vqsstar{V^*{}_{\!\!\!\!\Qq\Qs}}
+\def\Vqbstar{V^*{}_{\!\!\!\!\Qq\Qb}}
+\def\Vqpd{V_{\Qq^\prime\Qd}}
+\def\Vqps{V_{\Qq^\prime\Qs}}
+\def\Vqpb{V_{\Qq^\prime\Qb}}
+\def\Vqpdstar{V^*{}_{\!\!\!\!\Qq^\prime\Qd}}
+\def\Vqpsstar{V^*{}_{\!\!\!\!\Qq^\prime\Qs}}
+\def\Vqpbstar{V^*{}_{\!\!\!\!\Qq^\prime\Qb}}
+\def\Vcd{V_{\Qc\Qd}}
+\def\Vcs{V_{\Qc\Qs}}
+\def\Vcb{V_{\Qc\Qb}}
+\def\Vtd{V_{\Qt\Qd}}
+\def\Vts{V_{\Qt\Qs}}
+\def\Vtb{V_{\Qt\Qb}}
+\def\VCKM{\tththmatrix{\Vud}{\Vus}{\Vub}{\Vcd}{\Vcs}{\Vcb}{\Vtd}{\Vts}{\Vtb}}
+%%
+\def\roots{\sqrt{s}}
+\def\rootsprime{\sqrt{s^\prime}}
+\def\Zzero{\Particle{Z}}
+\def\spinz{S_z}
+\def\spinzop{\op{S}_z}
+\def\MRR{M_{RL\rightarrow RL}}
+\def\MRL{M_{RL\rightarrow LR}}
+\def\MLR{M_{LR\rightarrow RL}}
+\def\MLL{M_{LR\rightarrow LR}}
+%%
+\def\halftheta{\frac{\theta}{2}}
