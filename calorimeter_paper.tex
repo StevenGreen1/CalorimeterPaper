@@ -54,7 +54,9 @@
     \address[a]{Cavendish Laboratory, University of Cambridge, Cambridge, United Kingdom}
      \cortext[cor1]{Corresponding author}
 
-    % The abstract
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% 1) Abstract
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     \begin{abstract}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
 nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
@@ -78,7 +80,11 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Main part
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% 2) Introduction
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 \section{Introduction}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
 nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
@@ -95,17 +101,68 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
   \end{center}
 \end{figure}
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% 3) Implementation
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 \section{Implementation}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
-iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
-consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
-decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+\subsection{Simulation}
+
+The simulation of detector model response to various physics events was performed using MOKKA.  MOKKA uses Geant4 and the geometry information for a given detector model to produce detailed simulations of detector response for various ILC detector concepts.  The flexibility in MOKKA allows various detector parameters to be modified and so optimisation studies can be performed.  In this study the optimisation was performed with respect to the ILD detector model.  
+
+\subsection{Reconstruction}
+
+The reconstruction of physics events was performed using the MARLIN reconstruction framework, which allows for modular implementation of various c++ programs each tasked with one aspect of the reconstruction.  While several programs are used in the full reconstruction it is important to highlight firstly to the pattern recognition implementation of particle flow calorimetry, which is done using PandoraPFA, and secondly the digitisation of calorimeter hits, implemented in the ILDCaloDigi processor.  
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.35\textwidth]{3_Implementation/500GeVJets.png}
+     \caption{Typical topologies 250GeV jets simulated in the ILD detector model.  \label{2-jets}}
+  \end{center}
+\end{figure}
+
+\subsubsection{PandoraPFA}
+
+The PandoraPFA software package implements the pattern recognition side of particle flow calorimetry.  It is essential that calorimeter hits are correctly assigned to charged particle tracks to avoid double counting of energy in the particle flow paradigm.  This can be extremely challenging given the complex topologies associated to particle showers at high energies such as those shown in figure \ref{2-jets}.
+
+Due to the varied nature of detector models being simulated in these studies it is necessary to have reusable and flexible software that is isolated from the detector model.  This is achieved using the Pandora Software Development Kit (PandoraSDK), which is an independent framework for applying sophisticated topological algorithms designed to perform the association of calorimeter hits to charged particle tracks.  The algorithm logic applied in PandoraSDK is independent of detector model.
+
+\subsubsection{ILDCaloDigi}
+
+The ILDCaloDigi processor is designed to perform the digitisation of calorimeter hits for the ILD detector model.  Digitisation of calorimeter hits is the process by which the energy deposits in the absorber (non-active) region of a calorimeter cell is estimated using the measured value of the energy deposited in the active region of the cell.  Accurate energy estimators for calorimeter cells is crucial for estimating detector performance and so calibration at this stage is essential for all simulations.  
+
+A number of realistic effects can be simulated using the ILDCaloDigi processor, the full details of which can be found here.  For these studies electrical noise and a limited electronics read out range was simulated and the effect of timing cuts was analysed in detail.
+
+\subsection{Calibration}
+
+To ensure reliability in the conclusions drawn from these optimisation studies, it was necessary to calibrate the response of each detector model considered.  This occurred in three stages, the full details of which can be found here.  
+
+Initially, the detector response to minimum ionising particles (MIPs) was determined by looking at the detector response to muons.  This set the MIP scale in both the digitiser and inside PandoraPFA, which is needed as a reference energy unit for applying thresholds and cuts.  
+
+Secondly, the digitisation stage of the reconstruction was tuned for events of photons and long lived neutral kaons for events that were contained within the ECAL and HCAL respectively.  This tuning was an iterative procedure where constants in the digitisation processor, ILDCaloDigi, were varied and simulations repeated until the sum of calorimeter hit energies matched the Monte-Carlo energy of the photons and long lived neutral kaons being simulated.
+
+Finally, the electromagnetic and hadronic energy scales within PandoraPFA must be correctly set.  This is done by independently scaling the energy of particle flow objects (PFOs), the output reconstructed particles from PandoraPFA, for PFOs originating from electromagnetic and hadronic showers separately.  This is again done in an iterative procedure involving changing the inputs to PandoraPFA and repeating simulations until the PFO energy matches the Monte-Carlo energy for the photons (electromagnetic showers) and long lived neutral kaons (hadronic showers) being simulated.  
+
+\subsection{Parameterising Detector Performance}
+
+The primary figure of merit used in these optimisation studies is the jet energy resolution, as extensively described in (Pandora paper chapter 5).  The jets used in these studies are from the decay of off-shell mass Z bosons decaying at rest into a pair of light quarks (u,d,s).  Typically, such decays form mono-energetic jets back to back as can be seen in figure \ref{2-jets}.  
+
+It is possible to decompose the jet energy resolution into various components by cheating various parts of the reconstruction as shown in figures \ref{2-Decomp} and \ref{2-Conf}.  This provides a wealth of information that can be used to distinguish performance changes related to pattern recognition from changes related to intrinsic energy resolution.
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{3_Implementation/DetailedPlot.pdf}
+     \caption{Jet energy resolution as a function of jet energy for the ILD detector model.  The jet energy resolution has been decomposed into the intrinsic energy resolution and the confusion terms.  \label{2-Decomp}}
+  \end{center}
+    \begin{center}
+     \includegraphics[width=0.49\textwidth]{3_Implementation/Confusion.pdf}
+     \caption{Confusion decomposed into various terms as a function of jet energy.  Simulation was performed using the ILD detector model.  \label{2-Conf}}
+  \end{center}
+\end{figure}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Added JER and calib section. - SG
+% 4) Basic Detector Performance
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \section{Jet Energy Resolution and Calibration}
@@ -119,18 +176,8 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% SiW\,/\,ScW ECAL Comparison move to start of ECal 
-% section? - SG
+% 5) ECal Parameter Scan
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-\section{SiW\,/\,ScW ECAL Comparison}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
-iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
-consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
-decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
 
 \begin{figure}[!h]
   \begin{center}
@@ -146,7 +193,6 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
      \caption{\label{}}
   \end{center}
 \end{figure}
-
 
 \section{ECAL Parameter Scan}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
@@ -194,10 +240,7 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
 \end{figure}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Added HCal section - SG
-% Possibly change this title from parameter scan to optimisation
-% as we need somewhere to put the shower profiles and energy
-% resolutions (which isn't a param scan)
+% 6) HCal Parameter Scan
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \section{HCAL Parameter Scan}
@@ -274,7 +317,7 @@ No picture needed in this section, all jet energy resolutions are flat wrt sampl
 deteriorate across all jet energies considered.  
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Possible change for global parameter scan section - SG
+% 7) Global Parameter Scan
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \section{Global Parameter Scan}
@@ -369,6 +412,10 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
 %  \end{center}
 %\end{figure}
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% 8) Novel ECal Models
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 \section{Novel ECAL Models}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
 nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
@@ -402,6 +449,10 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
 %  \end{center}
 %\end{figure}
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% 9) Performance for Higher Energy Jets
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 \section{Performance for Higher Energy Jets}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
 nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
@@ -418,6 +469,10 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
      \caption{\label{}}
   \end{center}
 \end{figure}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% 10) Summary
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \section{Summary}
  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
