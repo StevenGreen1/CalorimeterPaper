@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.1)  2 DEC 2015 14:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.1)  2 DEC 2015 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -730,39 +730,53 @@ Overfull \hbox (7.32257pt too wide) in paragraph at lines 159--160
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<ERes_vs_Egamma.pdf, id=24, 569.12625pt x 494.84875pt>
-File: ERes_vs_Egamma.pdf Graphic file (type pdf)
+<4_BasicDetPerf/TimingCut.pdf, id=24, 569.12625pt x 386.44376pt>
+File: 4_BasicDetPerf/TimingCut.pdf Graphic file (type pdf)
 
-<use ERes_vs_Egamma.pdf>
-Package pdftex.def Info: ERes_vs_Egamma.pdf used on input line 184.
-(pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
- <SiSc_TProfile.pdf, id=25, 569.12625pt x 494.84875pt>
-File: SiSc_TProfile.pdf Graphic file (type pdf)
+<use 4_BasicDetPerf/TimingCut.pdf>
+Package pdftex.def Info: 4_BasicDetPerf/TimingCut.pdf used on input line 180.
+(pdftex.def)             Requested size: 229.32257pt x 155.71281pt.
 
-<use SiSc_TProfile.pdf>
-Package pdftex.def Info: SiSc_TProfile.pdf used on input line 185.
-(pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
-
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 184--186
- [] 
- []
-
-
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 184--186
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 180--181
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Confusion_vs_E.pdf, id=26, 569.12625pt x 494.84875pt>
+<ERes_vs_Egamma.pdf, id=25, 569.12625pt x 494.84875pt>
+File: ERes_vs_Egamma.pdf Graphic file (type pdf)
+
+<use ERes_vs_Egamma.pdf>
+Package pdftex.def Info: ERes_vs_Egamma.pdf used on input line 194.
+(pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
+ <SiSc_TProfile.pdf, id=26, 569.12625pt x 494.84875pt>
+File: SiSc_TProfile.pdf Graphic file (type pdf)
+
+<use SiSc_TProfile.pdf>
+Package pdftex.def Info: SiSc_TProfile.pdf used on input line 195.
+(pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
+
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 194--196
+ [] 
+ []
+
+
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 194--196
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Confusion_vs_E.pdf, id=27, 569.12625pt x 494.84875pt>
 File: Confusion_vs_E.pdf Graphic file (type pdf)
 
 <use Confusion_vs_E.pdf>
-Package pdftex.def Info: Confusion_vs_E.pdf used on input line 192.
+Package pdftex.def Info: Confusion_vs_E.pdf used on input line 202.
 (pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 192--193
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 202--203
  [] 
  []
 
@@ -771,234 +785,268 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3 <./3_Implementation/DetailedPlot.pdf, page is rotated 90 degrees> <./3_Imple
 mentation/Confusion.pdf, page is rotated 90 degrees>]
-<Res_vs_C_diffE_Photon.pdf, id=116, 569.12625pt x 494.84875pt>
+<Res_vs_C_diffE_Photon.pdf, id=117, 569.12625pt x 494.84875pt>
 File: Res_vs_C_diffE_Photon.pdf Graphic file (type pdf)
 
 <use Res_vs_C_diffE_Photon.pdf>
-Package pdftex.def Info: Res_vs_C_diffE_Photon.pdf used on input line 217.
+Package pdftex.def Info: Res_vs_C_diffE_Photon.pdf used on input line 227.
 (pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
 
-<Confusion_vs_C_250.pdf, id=117, 569.12625pt x 494.84875pt>
+<Confusion_vs_C_250.pdf, id=118, 569.12625pt x 494.84875pt>
 File: Confusion_vs_C_250.pdf Graphic file (type pdf)
 
 <use Confusion_vs_C_250.pdf>
-Package pdftex.def Info: Confusion_vs_C_250.pdf used on input line 218.
+Package pdftex.def Info: Confusion_vs_C_250.pdf used on input line 228.
 (pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 217--219
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 227--229
  [] 
  []
 
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 217--219
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 227--229
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./ERes_vs_Egamma.pdf, page is rotated 90 degrees> <./SiSc_TProfile.pdf, pag
-e is rotated 90 degrees> <./Confusion_vs_E.pdf, page is rotated 90 degrees>]
-<Res_vs_L_diffE_Photon.pdf, id=251, 569.12625pt x 494.84875pt>
+
+Underfull \vbox (badness 2326) has occurred while \output is active []
+
+ [4 <./4_BasicDetPerf/TimingCut.pdf, page is rotated 90 degrees> <./ERes_vs_Ega
+mma.pdf, page is rotated 90 degrees> <./SiSc_TProfile.pdf, page is rotated 90 d
+egrees>]
+<Res_vs_L_diffE_Photon.pdf, id=252, 569.12625pt x 494.84875pt>
 File: Res_vs_L_diffE_Photon.pdf Graphic file (type pdf)
 
 <use Res_vs_L_diffE_Photon.pdf>
-Package pdftex.def Info: Res_vs_L_diffE_Photon.pdf used on input line 235.
+Package pdftex.def Info: Res_vs_L_diffE_Photon.pdf used on input line 245.
 (pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
 
-<Res_vs_M_diffE_Photon.pdf, id=252, 569.12625pt x 494.84875pt>
+<Res_vs_M_diffE_Photon.pdf, id=253, 569.12625pt x 494.84875pt>
 File: Res_vs_M_diffE_Photon.pdf Graphic file (type pdf)
 
 <use Res_vs_M_diffE_Photon.pdf>
-Package pdftex.def Info: Res_vs_M_diffE_Photon.pdf used on input line 236.
+Package pdftex.def Info: Res_vs_M_diffE_Photon.pdf used on input line 246.
 (pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 235--238
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 245--248
  [] 
  []
 
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 235--238
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 245--248
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 1412) has occurred while \output is active []
-
- [5 <./Res_vs_C_diffE_Photon.pdf, page is rotated 90 degrees> <./Confusion_vs_C
-_250.pdf, page is rotated 90 degrees> <./Res_vs_L_diffE_Photon.pdf, page is rot
-ated 90 degrees> <./Res_vs_M_diffE_Photon.pdf, page is rotated 90 degrees>]
-<JERvsJetEnergy_HCalMaterialHCalTC10ns.png, id=428, 2003.485pt x 1979.395pt>
+<JERvsJetEnergy_HCalMaterialHCalTC10ns.png, id=254, 2003.485pt x 1979.395pt>
 File: JERvsJetEnergy_HCalMaterialHCalTC10ns.png Graphic file (type png)
 
 <use JERvsJetEnergy_HCalMaterialHCalTC10ns.png>
 Package pdftex.def Info: JERvsJetEnergy_HCalMaterialHCalTC10ns.png used on inpu
-t line 259.
+t line 269.
 (pdftex.def)             Requested size: 229.32257pt x 226.55342pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 259--260
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 269--270
  [] 
  []
 
-<6_HCalParamScan/JER_vs_HCalCellSize.pdf, id=429, 569.12625pt x 385.44pt>
+
+Underfull \hbox (badness 1158) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/8 Figure 10: |The jet en-ergy res-o-lu-tion as a func-tion of je
+t en-
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./Confusion_vs_E.pdf, page is rotated 90 degrees> <./Res_vs_C_diffE_Photon.
+pdf, page is rotated 90 degrees> <./Confusion_vs_C_250.pdf, page is rotated 90 
+degrees>]
+<6_HCalParamScan/JER_vs_HCalCellSize.pdf, id=387, 569.12625pt x 385.44pt>
 File: 6_HCalParamScan/JER_vs_HCalCellSize.pdf Graphic file (type pdf)
 
 <use 6_HCalParamScan/JER_vs_HCalCellSize.pdf>
 Package pdftex.def Info: 6_HCalParamScan/JER_vs_HCalCellSize.pdf used on input 
-line 273.
+line 283.
 (pdftex.def)             Requested size: 229.32257pt x 155.30836pt.
 
-<JERBreakdownvsHCalCellSize500GeVDiJetHCalTC10ns.png, id=430, 2003.485pt x 1979
+<JERBreakdownvsHCalCellSize500GeVDiJetHCalTC10ns.png, id=388, 2003.485pt x 1979
 .395pt>
 File: JERBreakdownvsHCalCellSize500GeVDiJetHCalTC10ns.png Graphic file (type pn
 g)
  <use JERBreakdownvsHCalCellSize500GeVDiJetHCalTC10ns.png>
 Package pdftex.def Info: JERBreakdownvsHCalCellSize500GeVDiJetHCalTC10ns.png us
-ed on input line 274.
+ed on input line 284.
 (pdftex.def)             Requested size: 229.32257pt x 226.55342pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 273--275
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 283--285
  [] 
  []
 
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 273--275
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 283--285
  [] 
  []
 
-[6 <./JERvsJetEnergy_HCalMaterialHCalTC10ns.png> <./6_HCalParamScan/JER_vs_HCal
-CellSize.pdf, page is rotated 90 degrees> <./JERBreakdownvsHCalCellSize500GeVDi
-JetHCalTC10ns.png>]
-<6_HCalParamScan/JER_vs_NumberOfLayersInTheHCal.pdf, id=477, 569.12625pt x 385.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<6_HCalParamScan/JER_vs_NumberOfLayersInTheHCal.pdf, id=389, 569.12625pt x 385.
 44pt>
 File: 6_HCalParamScan/JER_vs_NumberOfLayersInTheHCal.pdf Graphic file (type pdf
 )
  <use 6_HCalParamScan/JER_vs_NumberOfLayersInTheHCal.pdf>
 Package pdftex.def Info: 6_HCalParamScan/JER_vs_NumberOfLayersInTheHCal.pdf use
-d on input line 288.
+d on input line 298.
 (pdftex.def)             Requested size: 229.32257pt x 155.30836pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 288--289
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 298--299
  [] 
  []
 
 
-<6_HCalParamScan/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf, id=478, 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 <./Res_vs_L_diffE_Photon.pdf, page is rotated 90 degrees> <./Res_vs_M_diffE_
+Photon.pdf, page is rotated 90 degrees> <./JERvsJetEnergy_HCalMaterialHCalTC10n
+s.png>]
+Underfull \vbox (badness 1005) has occurred while \output is active []
+
+
+<6_HCalParamScan/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf, id=479, 
 569.12625pt x 385.44pt>
 File: 6_HCalParamScan/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf Grap
 hic file (type pdf)
 
 <use 6_HCalParamScan/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf>
 Package pdftex.def Info: 6_HCalParamScan/JER_vs_NumberOfNuclearInterationLength
-sInTheHCal.pdf used on input line 306.
+sInTheHCal.pdf used on input line 316.
 (pdftex.def)             Requested size: 229.32257pt x 155.30836pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 306--307
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 316--317
+ [] 
+ []
+
+[7 <./6_HCalParamScan/JER_vs_HCalCellSize.pdf, page is rotated 90 degrees> <./J
+ERBreakdownvsHCalCellSize500GeVDiJetHCalTC10ns.png> <./6_HCalParamScan/JER_vs_N
+umberOfLayersInTheHCal.pdf, page is rotated 90 degrees> <./6_HCalParamScan/JER_
+vs_NumberOfNuclearInterationLengthsInTheHCal.pdf, page is rotated 90 degrees>]
+<7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf, id=614, 569.12625pt x 385.44pt>
+File: 7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf Graphic file (type pdf)
+
+<use 7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf>
+Package pdftex.def Info: 7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf used on i
+nput line 353.
+(pdftex.def)             Requested size: 229.32257pt x 155.30836pt.
+
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 353--354
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./6_HCalParamScan/JER_vs_NumberOfLayersInTheHCal.pdf, page is rotated 90 de
-grees> <./6_HCalParamScan/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf,
- page is rotated 90 degrees>]
-<7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf, id=570, 569.12625pt x 385.44pt>
-File: 7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf Graphic file (type pdf)
 
-<use 7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf>
-Package pdftex.def Info: 7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf used on i
-nput line 343.
-(pdftex.def)             Requested size: 229.32257pt x 155.30836pt.
-
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 343--344
- [] 
- []
-
-
-<7_GlobalParamScan/JER_vs_MagneticFieldStrength.pdf, id=571, 569.12625pt x 385.
+<7_GlobalParamScan/JER_vs_MagneticFieldStrength.pdf, id=615, 569.12625pt x 385.
 44pt>
 File: 7_GlobalParamScan/JER_vs_MagneticFieldStrength.pdf Graphic file (type pdf
 )
  <use 7_GlobalParamScan/JER_vs_MagneticFieldStrength.pdf>
 Package pdftex.def Info: 7_GlobalParamScan/JER_vs_MagneticFieldStrength.pdf use
-d on input line 359.
+d on input line 369.
 (pdftex.def)             Requested size: 229.32257pt x 155.30836pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 359--360
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 369--370
  [] 
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [8 <./7_GlobalParamScan/JER_vs_ECalInnerRadius.pdf, page is rotated 90 degrees>
- <./7_GlobalParamScan/JER_vs_MagneticFieldStrength.pdf, page is rotated 90 degr
-ees>] <TwoG_Context_15mm.pdf, id=661, 569.12625pt x 480.79625pt>
+] <TwoG_Context_15mm.pdf, id=662, 569.12625pt x 480.79625pt>
 File: TwoG_Context_15mm.pdf Graphic file (type pdf)
 
 <use TwoG_Context_15mm.pdf>
-Package pdftex.def Info: TwoG_Context_15mm.pdf used on input line 430.
+Package pdftex.def Info: TwoG_Context_15mm.pdf used on input line 440.
 (pdftex.def)             Requested size: 229.32257pt x 193.731pt.
 
-<ThreeG_Context_15mm.pdf, id=662, 569.12625pt x 480.79625pt>
+<ThreeG_Context_15mm.pdf, id=663, 569.12625pt x 480.79625pt>
 File: ThreeG_Context_15mm.pdf Graphic file (type pdf)
 
 <use ThreeG_Context_15mm.pdf>
-Package pdftex.def Info: ThreeG_Context_15mm.pdf used on input line 431.
+Package pdftex.def Info: ThreeG_Context_15mm.pdf used on input line 441.
 (pdftex.def)             Requested size: 229.32257pt x 193.731pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 430--432
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 440--442
  [] 
  []
 
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 430--432
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 440--442
  [] 
  []
 
-[9 <./TwoG_Context_15mm.pdf, page is rotated 90 degrees> <./ThreeG_Context_15mm
-.pdf, page is rotated 90 degrees>]
-<HighEnergy_ResDiffAlgs.pdf, id=753, 569.12625pt x 494.84875pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./7_GlobalParamScan/JER_vs_MagneticFieldStrength.pdf, page is rotated 90 de
+grees>] <HighEnergy_ResDiffAlgs.pdf, id=710, 569.12625pt x 494.84875pt>
 File: HighEnergy_ResDiffAlgs.pdf Graphic file (type pdf)
 
 <use HighEnergy_ResDiffAlgs.pdf>
-Package pdftex.def Info: HighEnergy_ResDiffAlgs.pdf used on input line 467.
+Package pdftex.def Info: HighEnergy_ResDiffAlgs.pdf used on input line 477.
 (pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
 
-<HighEnergy_ScWConf.pdf, id=754, 569.12625pt x 494.84875pt>
+<HighEnergy_ScWConf.pdf, id=711, 569.12625pt x 494.84875pt>
 File: HighEnergy_ScWConf.pdf Graphic file (type pdf)
 
 <use HighEnergy_ScWConf.pdf>
-Package pdftex.def Info: HighEnergy_ScWConf.pdf used on input line 468.
+Package pdftex.def Info: HighEnergy_ScWConf.pdf used on input line 478.
 (pdftex.def)             Requested size: 229.32257pt x 199.3933pt.
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 467--469
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 477--479
  [] 
  []
 
 
-Overfull \hbox (7.32257pt too wide) in paragraph at lines 467--469
+Overfull \hbox (7.32257pt too wide) in paragraph at lines 477--479
  [] 
  []
 
 
-Package natbib Warning: Empty `thebibliography' environment on input line 496.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <./HighEnergy_ResDiffAlgs.pdf, page is rotated 90 degrees> <./HighEnergy_Sc
-WConf.pdf, page is rotated 90 degrees>] (./calorimeter_paper.aux)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./TwoG_Context_15mm.pdf, page is rotated 90 degrees> <./ThreeG_Context_15
+mm.pdf, page is rotated 90 degrees> <./HighEnergy_ResDiffAlgs.pdf, page is rota
+ted 90 degrees> <./HighEnergy_ScWConf.pdf, page is rotated 90 degrees>]
+
+Package natbib Warning: Empty `thebibliography' environment on input line 506.
+
+[11
+
+] (./calorimeter_paper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6534 strings out of 493089
- 91768 string characters out of 6134842
- 170133 words of memory out of 5000000
- 9814 multiletter control sequences out of 15000+600000
+ 6541 strings out of 493089
+ 91933 string characters out of 6134842
+ 171141 words of memory out of 5000000
+ 9819 multiletter control sequences out of 15000+600000
  59748 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,9n,42p,607b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,9n,42p,607b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
@@ -1007,10 +1055,10 @@ e/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on calorimeter_paper.pdf (10 pages, 5270152 bytes).
+Output written on calorimeter_paper.pdf (11 pages, 5283762 bytes).
 PDF statistics:
- 869 PDF objects out of 1000 (max. 8388607)
- 373 compressed objects within 4 object streams
+ 916 PDF objects out of 1000 (max. 8388607)
+ 393 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
