@@ -167,13 +167,32 @@ It is possible to decompose the jet energy resolution into various components by
 
 \section{Default Detector Performance}
 
-In these studies the reference detector model will be the ILD detector model.  However, it is necessary to clarify both the timing cut placed on the simulation and the hadronic energy truncation applied in PandoraPFA to digitised calorimeter cells before accurate comparisons between detector models can be made.  Both of these reconstruction variables have a significant impact on detector performance, which is elaborated upon below.  
+In these studies the reference detector model will be the ILD detector model.  In this model the ECal consists of a 30 layer, silicon-tungsten ECal with a square cell size of $5\times5\text{mm}^2$ containing $\sim24$ radiation lengths ($X_0$) and $\sim1$ nuclear interaction length ($\lambda_I$).  The HCal consists of a 48 layer, scintillator-steel HCal with a square cell size of $30\times30\text{mm}^2$ containing $\sim50X_0$ and $\sim6\lambda_I$. 
+
+In order to have confidence in the conclusions drawn from detector model comparisons, a number of parameters used in the reconstruction should be specified.  Both the timing cut placed on the simulation and the hadronic energy truncation applied to digitised HCal cells in PandoraPFA have a large impact on the detector performance.  The details of their dependancy of detector performance is described in sections \ref{TC} and \ref{HET}.
+
+For these studies the default jet energy resolutions are shown in table \ref{Default}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{| p{1.5cm} | p{1cm} | p{1.5cm} | p{2.25cm} |} 
+ \hline
+ Jet Energy (GeV) & rms (GeV) & $\text{rms}_{90}(E_{jj})$ (GeV) & $\text{rms}_{90}(E_{j})$ / $E_{j}$ (\%)  \\ [0.5ex] 
+ \hline
+ 45.5 & 3.32 & 2.35 & (3.68$\pm$0.05) \\ 
+ 100 & 7.83 & 4.08 & (2.90$\pm$0.04) \\
+ 180 & 10.89 & 7.32 & (2.89$\pm$0.04) \\
+ 250 & 18.18 & 10.43 & (2.98$\pm$0.04) \\
+ \hline
+\end{tabular}
+\caption{Default ILD detector performance.  A 100 ns timing cut was applied to this simulation and the hadronic energy truncation applied in PandoraPFA was 1 GeV.}
+\label{Default}
+\end{table}
 
 \subsection{Timing Cuts}
+\label{TC}
 
-The detector at a future linear collider will have timing cuts applied of the order of tens of nano seconds.  Timing cuts are necessary to prevent saturation of the detector model when reading out signals from the detector when integrating over multiple collisions.  However, a balance has to be struck between having large enough timing cuts to record all of the signal for a collision and not saturating the detector.  Currently, technology options for the read out electronics also apply a lower limit of approximately ten nano seconds to the timing cut window.
-
-As it is clear that timing cuts will have to be applied the impact of the choice of timing cuts has been analysed and results shown in figure \ref{4-TC}.
+When considering calorimetry at a collider experiment, a balance has to be struck between allowing enough time for particle showers to develop and reading out signals, integrated over multiple collisions, at a sufficiently fast rate to prevent saturation.  Therefore, hits in the calorimeter after a time of $O(100 \text{ns})$ corrected for time of flight will not be used in the reconstruction.  The impact of this timing cut on the reconstruction is shown in figure \ref{4-TC}.  In the following studies a timing cut of 100ns was applied to all simulations.  
 
 \begin{figure}[!h]
   \begin{center}
@@ -183,7 +202,20 @@ As it is clear that timing cuts will have to be applied the impact of the choice
 \end{figure}
 
 \subsection{Hadronic Energy Truncation}
+\label{HET}
 
+In sampling calorimeters, it is possible to apply software compensation to improve the estimation of energy deposited in the inactive medium of the calorimeters.  A simplistic form of software compensation applied in PandoraPFA is truncation, on a per cell basis, of the hadronic energy measured in the HCal.  The effect of this software compensation is twofold, firstly, it improves the energy estimators of the particle showers in the calorimeters and, secondly, the improved energy estimators make the pattern recognition logic more effective.  Both of these effects can be seen clearly in figure \ref{4-HET}, which shows an improvement in both the intrinsic energy resolution of the detector and a reduction in the pattern recognition confusion when a truncation of 1 GeV is applied to the default detector.
+
+The truncation value applied in PandoraPFA strongly determines the performance of the detector.  The dependancy of detector performance on the hadronic energy truncation can be seen in figure \ref{4-HET2}.  The optimal value of the hadronic energy truncation varies both as a function of jet energy and detector model.  The value of the truncation is optimised for each detector model considered in the studies presented here, however, the truncation applied is kept independent of the jet energy.  
+
+\begin{figure}[!h]
+  \begin{center}
+     \includegraphics[width=0.49\textwidth]{4_BasicDetPerf/JER_vs_Ej_Default_Detector_Default_Reco.pdf}
+     \caption{Jet energy resolution as a function of jet energy for the ILD detector model with various timings cuts applied to the reconstruction.  \label{4-HET}}
+     \includegraphics[width=0.49\textwidth]{4_BasicDetPerf/JER_vs_Ej_LCWS_Plot.pdf}
+     \caption{Jet energy resolution as a function of jet energy for the ILD detector model with various timings cuts applied to the reconstruction.  The hadronic energy truncation applied to these simulations is 1 GeV.  \label{4-HET2}}
+  \end{center}
+\end{figure}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % 5) ECal Parameter Scan
