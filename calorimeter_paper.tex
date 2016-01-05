@@ -148,7 +148,11 @@ Finally, the electromagnetic and hadronic energy scales within PandoraPFA must b
 
 The primary figure of merit used in these optimisation studies is the jet energy resolution, as extensively described in (Pandora paper chapter 5).  The jets used in these studies are from the decay of off-shell mass Z bosons decaying at rest into a pair of light quarks (u,d,s).  Typically, such decays form mono-energetic jets back to back as can be seen in figure \ref{2-jets}.  
 
-It is possible to decompose the jet energy resolution into various components by cheating various parts of the reconstruction as shown in figures \ref{2-Decomp} and \ref{2-Conf}.  This provides a wealth of information that can be used to distinguish performance changes related to pattern recognition from changes related to intrinsic energy resolution.
+Detector performance, in the particle flow paradigm, is a combination of intrinsic energy resolution and pattern recognition.  It is possible to isolate the magnitude of these two contributions to the jet energy resolution by cheating the pattern reconstruction using the Monte Carlo (MC) information, as shown in figure \ref{2-Decomp}.  Analysis of this information extends understanding of the behaviour of a detector model and will be beneficial for detector model comparisons.
+
+A reconstruction where the pattern recognition is fully cheated provides the intrinsic energy resolution contribution to the jet energy resolution.  The quadrature difference between the default reconstruction jet energy resolution, which uses no MC information, and the fully cheated reconstruction jet energy resolution provides the confusion contribution to the jet energy resolution.  This confusion term arises due to the misidentification of the origin of some energy deposits in the detector. 
+
+By only cheating certain aspects of the reconstruction, it is possible to decompose the confusion into terms related to the misidentification of energy deposits from certain classes of particles such as photons or neutral hadrons.  Figure \ref{2-Conf} shows a typical example of this decomposition where the photon and neutral hadron confusions have been isolated.  The other confusion is the quadrature difference between the total confusion and the sum of the photon and neutral hadron confusions.  
 
 \begin{figure}[!h]
   \begin{center}
@@ -166,6 +170,7 @@ It is possible to decompose the jet energy resolution into various components by
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \section{Default Detector Performance}
+\label{Sec4}
 
 In these studies the reference detector model will be the ILD detector model.  In this model the ECal consists of a 30 layer, silicon-tungsten ECal with a square cell size of $5\times5\text{mm}^2$ containing $\sim24$ radiation lengths ($X_0$) and $\sim1$ nuclear interaction length ($\lambda_I$).  The HCal consists of a 48 layer, scintillator-steel HCal with a square cell size of $30\times30\text{mm}^2$ containing $\sim50X_0$ and $\sim6\lambda_I$. 
 
@@ -221,44 +226,50 @@ The truncation value applied in PandoraPFA strongly determines the performance o
 % 5) ECal Parameter Scan
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+\section{ECAL Parameter Scan}
+\label{Sec5}
+
+Sampling of electromagnetic particle showers in ILD occurs primarily in the ECal.  Due to the $\sim24X_0$ contained within the ECal all but the highest energy electromagnetic showers will be contained within the ECal.  The $\sim1\lambda_I$ contained in the ECal also means that some hadronic showers will being forming in the ECal, but the bulk of the hadronic showers will be found in the HCal.  
+
+The ECal requires fine longitudinal and transverse granularities such that the separation of nearby particle showers becomes possible via the application of sophisticated pattern recognition algorithms provided by PandoraPFA.  For the default ILD ECal, there are 30 layers and a cell size is $5\times5\text{mm}^2$, which does provide sufficient granularity for the application of particle flow calorimetry.  The optimisation of these granularities is considered in the following chapter.
+
+The default detector model uses silicon as the active material for the ECal.  However, using scintillator for the active material would be a more cost effective option.  A comparison between these two active material choices is presented below to determine which of the two options gives the best physics performance.
+
+\subsection{ECal Active Material}
+
+The impact of the active material on the intrinsic energy resolution of the detector can be seen in figure \ref{5-IER}.  The energy resolution for the two options is comparable, but scintillator active material shows a small reduction in the resolution.  
+
+Figure \ref{5-CON}, which shows a reduction in the misidentification of photon energy deposits, the photon confusion, when silicon is used instead of scintillator as the active material choice in the ECal.  This is to be expected as the larger Moliére radius in scintillator means electromagnetic showers are broader, as seen in figure \ref{5-SW}, making pattern recognition more challenging.   
+
+There is relatively little performance difference when comparing silicon to scintillator as the ECal absorber material when considering jet energy resolution, as figure \ref{5-SW} shows.  However, the improved application of pattern recognition logic for silicon based ECals means that physics performance for processes where photon identification is crucial will benefit more from a silicon based ECal.
+
 \begin{figure}[!h]
   \begin{center}
      \includegraphics[width=0.49\textwidth]{ERes_vs_Egamma.pdf}
-     \includegraphics[width=0.49\textwidth]{SiSc_TProfile.pdf}
-     \caption{\label{}}
+     \caption{Energy resolution, comparison between scintillator and silicon active materials for the ECal.  \label{5-IER}}
+     \includegraphics[width=0.49\textwidth]{Confusion_vs_E.pdf}
+     \caption{Comparison of the jet energy resolution and the confusion terms as a function of jet energy between silicon and scintillator active material choices for the ECal. \label{5-CON} }
   \end{center}
 \end{figure}
 
 \begin{figure}[!h]
   \begin{center}
-     \includegraphics[width=0.49\textwidth]{Confusion_vs_E.pdf}
-     \caption{\label{}}
+     \includegraphics[width=0.49\textwidth]{SiSc_TProfile.pdf}
+     \caption{Comparison between the electromagnetic shower widths as a function of layer number when using silicon and scintillator as the active material in the ECal.  \label{5-SW}}
   \end{center}
 \end{figure}
 
-\section{ECAL Parameter Scan}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
-iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
-consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
-decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-
 \subsection{Transverse Granularity}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in
-iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem
-consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
-decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+
+The dependancy of the jet energy resolution on the ECal cell size is shown in figure \ref{5-ECS}.  As expected the finer the granularity in the ECal improved the resolution of the detector.  The confusion terms shown in figure \ref{5-ECSC} clearly show that the improvement in resolution with a finer granularity ECal is down to a reduction in the photon confusion. 
 
 \begin{figure}[!h]
   \begin{center}
      \includegraphics[width=0.49\textwidth]{Res_vs_C_diffE_Photon.pdf}
+     \caption{Jet energy resolution as a function of ECal cell size.  Results are shown for both silicon and scintillator based ECal at various jet energies.  \label{5-ECS}}
      \includegraphics[width=0.49\textwidth]{Confusion_vs_C_250.pdf}
-     \caption{\label{}}
+     \caption{Jet energy resolution and the confusion terms as a function of ECal cell size for 250 GeV jets.  Results are shown for both silicon and scintillator based ECals. \label{5-ECSC}}
+     \caption{\label{5-CON2}}
   \end{center}
 \end{figure}
 
@@ -277,15 +288,16 @@ decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
      \includegraphics[width=0.49\textwidth]{Res_vs_L_diffE_Photon.pdf}
      \includegraphics[width=0.49\textwidth]{Res_vs_M_diffE_Photon.pdf}
 %     \includegraphics[width=0.49\textwidth]{ERes_vs_L.pdf}
-     \caption{\label{}}
+     \caption{Number Two}
   \end{center}
 \end{figure}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % 6) HCal Parameter Scan
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 \section{HCAL Parameter Scan}
+\label{Sec6}
+
 ILD detector model used.  Timing cuts used are 10ns in HCal and 20ns in ECal.  No MaxHCalHitHadronicEnergy.  Full calibration procedure applied for all detector models.  
 QGSP\_BERT physics list used in all cases except Fe and W comparison where both QGSP\_BERT and QGSP\_BERT\_HP used. 
 
@@ -298,7 +310,7 @@ HCals using steel as an absorber material were found to outperform those using t
 
 \begin{figure}[!h]
   \begin{center}
-     \includegraphics[width=0.49\textwidth]{JERvsJetEnergy_HCalMaterialHCalTC10ns.png}
+     \includegraphics[width=0.49\textwidth]{6_HCalParamScan/JER_vs_JetEnergy_HCalAbsorberMaterial.pdf}
      \caption{The jet energy resolution as a function of jet energy.  Results are shown for detectors using both steel and tungsten HCal absorber materials and using both the QGSP\_BERT and QGSP\_BERT\_HP physics lists.  \label{}}
   \end{center}
 \end{figure}
